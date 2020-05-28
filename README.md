@@ -1,2 +1,2 @@
 # Examples
-Examples for Delphi, C++ Builder and Lazarus
+Examples of using GLScene for Delphi
