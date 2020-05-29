@@ -1,0 +1,31 @@
+Format of location file entry (where date is in dd/mm/yyyy) : (24/Jan/1972)
+(1972-01-24 that's the _only_ sensible way of sorting dates... it all becomes a Delphi Datefield number... 0 to xxxxx now)
+The date is displayed per System settings it seems...
+
+longitude(E-W), latitude(N-S), type, Glow, type name,name,nickname,city,state,country,GLS date,DOB date,photo path+name,e-mail,url link,Demo Name,Description
+
+[20 characters is about all that displays, 
+depending on the number of i's and ls' :), no set physical limit?]
+
+* = REQUIRED data 
+
+*longitude(E-W) 
+*latitude(N-S)
+*type (GLS interest.. Default to 0: Undecided Type)
+GLS Developer Glow (100..0) (Default 0).. 
+*type name ("Type Subset" to describe the type further.. Defaults to the type's words)
+*name
+nickname (call sign, handle, buzz word)
+city
+state (or region .. depends on Country usage)
+country
+date (started using GLS)(Temporal Flow of GLS around world)
+date (Date Of Birth: DOB)
+photo path+name (path+name are actually only local...)
+e-mail (auto link)
+url link (your "home page")
+Demo Name (enables auto start if available... probably input by user)
+Description (of actual GLS Project...Interest. Length: [5x256 char].. or maybe a 2 meg string.. or maybe 25 words or less) How long can a Readln be?
+... no more data.. no more room on form
+
+

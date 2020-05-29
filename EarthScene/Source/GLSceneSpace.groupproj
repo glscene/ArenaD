@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{6EB6A966-ECFE-406C-87D9-FABEE4BA950B}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="SpaceGLScene.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="EarthAbcde.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="EarthPilot.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="SpaceGLScene">
+        <MSBuild Projects="SpaceGLScene.dproj"/>
+    </Target>
+    <Target Name="SpaceGLScene:Clean">
+        <MSBuild Projects="SpaceGLScene.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SpaceGLScene:Make">
+        <MSBuild Projects="SpaceGLScene.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="EarthAbcde">
+        <MSBuild Projects="EarthAbcde.dproj"/>
+    </Target>
+    <Target Name="EarthAbcde:Clean">
+        <MSBuild Projects="EarthAbcde.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="EarthAbcde:Make">
+        <MSBuild Projects="EarthAbcde.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="EarthPilot">
+        <MSBuild Projects="EarthPilot.dproj"/>
+    </Target>
+    <Target Name="EarthPilot:Clean">
+        <MSBuild Projects="EarthPilot.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="EarthPilot:Make">
+        <MSBuild Projects="EarthPilot.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="SpaceGLScene;EarthAbcde;EarthPilot"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="SpaceGLScene:Clean;EarthAbcde:Clean;EarthPilot:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="SpaceGLScene:Make;EarthAbcde:Make;EarthPilot:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
