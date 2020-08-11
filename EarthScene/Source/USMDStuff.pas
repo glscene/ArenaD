@@ -18,12 +18,12 @@ uses
   System.SysUtils,
   System.Math,
 
-  GLScene,
-  GLCoordinates,
-  GLVectorLists,
-  GLVectorFileObjects,
-  GLVectorGeometry,
-  GLVectorTypes;
+  GLS.Scene,
+  GLS.Coordinates,
+  GLS.VectorLists,
+  GLS.VectorFileObjects,
+  GLS.VectorGeometry,
+  GLS.VectorTypes;
 
 // LOADING STUFF
 procedure LoadQC(QCFilename: string; Ac: TGLActor; LoadReference: Boolean;

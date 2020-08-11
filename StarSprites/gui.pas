@@ -14,17 +14,18 @@ uses
   Vcl.Dialogs,
   Vcl.ExtCtrls,
    
-  GLScene,
-  GLObjects,
-  GLVectorTypes,
-  GLWin32Viewer,
-  GLMaterial,
-  GLTexture,
-  GLKeyboard,
-  GLCoordinates,
-  GLCrossPlatform,
-  GLBaseClasses,
-  GLGraph;
+  GLS.Scene,
+  GLS.Objects,
+  GLS.VectorTypes,
+  GLS.SceneViewer,
+  GLS.Material,
+  GLS.Texture,
+  GLS.Keyboard,
+  GLS.Coordinates,
+  GLS.SkyDome,
+  
+  GLS.BaseClasses,
+  GLS.Graph;
 
 type
   TForm1 = class(TForm)
@@ -50,9 +51,9 @@ type
   end;
 
 const
-  numberstars = 4096; // [32, 4096]
-  fieldsize = 200;
-  halffieldsize = 100;
+  numberstars = 255;
+  fieldsize = 100;
+  halffieldsize = 50;
 
 var
   Form1: TForm1;
@@ -62,6 +63,14 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  Image1.Picture.LoadFromFile('star.bmp');
+  GLMaterialLibrary1.Materials[0].Material.Texture.Image.Assign(Image1.Picture);
+  loadstars;
+end;
+
 
 procedure TForm1.GLSceneViewer1MouseDown(Sender: TObject; Button: TMouseButton;
   Shift: TShiftState; X, Y: Integer);
@@ -74,7 +83,7 @@ procedure TForm1.GLSceneViewer1MouseMove(Sender: TObject; Shift: TShiftState;
   X, Y: Integer);
 begin
   if Shift <> [ssLeft] then
-    Exit;
+    exit;
   GLCamera1.MoveAroundTarget(vy - Y, vx - X);
   vx := X;
   vy := Y;
@@ -113,16 +122,10 @@ begin
     end;
 end;
 
-procedure TForm1.FormCreate(Sender: TObject);
-begin
-  Image1.Picture.LoadFromFile('star.bmp');
-  GLMaterialLibrary1.Materials[0].Material.Texture.Image.Assign(Image1.Picture);
-  Loadstars;
-end;
 
 procedure TForm1.Timer1Timer(Sender: TObject);
 begin
-  if IsKeyDown(38) then      // Up
+  if IsKeyDown(38) then
   begin
     GLDummyCube1.Position.X := GLDummyCube1.Position.X +
       GLSceneViewer1.Buffer.ScreenToVector(GLSceneViewer1.Width div 2,
@@ -134,7 +137,7 @@ begin
       GLSceneViewer1.Buffer.ScreenToVector(GLSceneViewer1.Width div 2,
       GLSceneViewer1.Height div 2).Z;
   end
-  else if IsKeyDown(40) then   // Down
+  else if IsKeyDown(40) then
   begin
     GLDummyCube1.Position.X := GLDummyCube1.Position.X -
       GLSceneViewer1.Buffer.ScreenToVector(GLSceneViewer1.Width div 2,
@@ -146,7 +149,7 @@ begin
       GLSceneViewer1.Buffer.ScreenToVector(GLSceneViewer1.Width div 2,
       GLSceneViewer1.Height div 2).Z;
   end;
-  Checkstars;
+  checkstars;
 end;
 
 end.

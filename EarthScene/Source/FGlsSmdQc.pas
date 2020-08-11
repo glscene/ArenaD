@@ -22,19 +22,19 @@ uses
   Vcl.StdCtrls,
   Vcl.ExtCtrls,
 
-  GLVectorGeometry,
-  GLVectorFileObjects,
-  GLScene,
-  GLObjects,
-  GLTexture,
-  GLCadencer,
-  GLWin32Viewer,
-  GLGraph,
-  GLVectorTypes,
-  GLMaterial,
-  GLCoordinates,
-  GLCrossPlatform,
-  GLBaseClasses;
+  GLS.VectorGeometry,
+  GLS.VectorFileObjects,
+  GLS.Scene,
+  GLS.Objects,
+  GLS.Texture,
+  GLS.Cadencer,
+  GLS.SceneViewer,
+  GLS.Graph,
+  GLS.VectorTypes,
+  GLS.Material,
+  GLS.Coordinates,
+  
+  GLS.BaseClasses;
 
 type
   TGlsSmdQcFrm = class(TForm)

@@ -24,21 +24,21 @@ uses
   Vcl.ComCtrls,
   Vcl.ToolWin,
 
-  GLCadencer,
-  GLTexture,
-  GLScene,
-  GLObjects,
-  GLVectorTypes,
-  GLVectorFileObjects,
-  GLWin32Viewer,
-  GLState,
-  GLVectorGeometry,
-  GLContext,
-  GLVectorLists,
-  GLMaterial,
-  GLCoordinates,
-  GLCrossPlatform,
-  GLBaseClasses;
+  GLS.Cadencer,
+  GLS.Texture,
+  GLS.Scene,
+  GLS.Objects,
+  GLS.VectorTypes,
+  GLS.VectorFileObjects,
+  GLS.SceneViewer,
+  GLS.State,
+  GLS.VectorGeometry,
+  GLS.Context,
+  GLS.VectorLists,
+  GLS.Material,
+  GLS.Coordinates,
+  
+  GLS.BaseClasses;
 
 type
   TGLSViewerFrm = class(TForm)
@@ -219,10 +219,27 @@ implementation
 {$R *.dfm}
 
 uses
-  GLKeyBoard, {GraphicEx,} GLPersistentClasses, GLMeshUtils,
-  GLFileOBJ, GLFileSTL, GLFileLWO, GLFileQ3BSP, GLFileOCT, GLFileMS3D,
-  GLFileNMF, GLFileMD3, GLFile3DS, GLFileMD2, GLFileSMD, GLFileTIN,
-  GLFilePLY, GLFileGTS, GLMeshOptimizer, GLColor, GLRenderContextInfo,
+  GLS.Keyboard,
+  //GraphicEx,
+  GLS.PersistentClasses,
+  GLS.MeshUtils,
+  GLS.FileOBJ,
+  GLS.FileSTL,
+  GLS.FileLWO,
+  GLS.FileQ3BSP,
+  GLS.FileOCT,
+  GLS.FileMS3D,
+  GLS.FileNMF,
+  GLS.FileMD3,
+  GLS.File3DS,
+  GLS.FileMD2,
+  GLS.FileSMD,
+  GLS.FileTIN,
+  GLS.FilePLY,
+  GLS.FileGTS,
+  GLS.MeshBuilder,
+  GLS.Color,
+  GLS.RenderContextInfo,
   uGlobals;
 
 type

@@ -25,26 +25,26 @@ uses
   Vcl.ComCtrls,
   Vcl.Buttons,
 
-  GLScene,
-  GLVectorFileObjects,
-  GLWin32Viewer,
-  GlFile3DS,
-  GLObjects,
-  GLTexture,
-  GLState,{ HoloGizmo, }
-  GLMaterial,
-  GLGeomObjects,
-  GLGraph,
-  GLCadencer,
-  GLVectorTypes,
-  GLVectorGeometry,
-  GLCoordinates,
-  GLColor,
-  GLPersistentClasses,
-  GLVectorLists,
-  GLMeshUtils,
-  GLCrossPlatform,
-  GLBaseClasses;
+  GLS.Scene,
+  GLS.VectorFileObjects,
+  GLS.SceneViewer,
+  GLS.File3DS,
+  GLS.Objects,
+  GLS.Texture,
+  GLS.State,{ HoloGizmo, }
+  GLS.Material,
+  GLS.GeomObjects,
+  GLS.Graph,
+  GLS.Cadencer,
+  GLS.VectorTypes,
+  GLS.VectorGeometry,
+  GLS.Coordinates,
+  GLS.Color,
+  GLS.PersistentClasses,
+  GLS.VectorLists,
+  GLS.MeshUtils,
+  
+  GLS.BaseClasses;
 
 type
   TMovingAxis = (maAxisX, maAxisY, maAxisZ, maAxisXY, maAxisXZ, maAxisYZ);

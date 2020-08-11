@@ -1,0 +1,28 @@
+uniform vec3 camDir;
+varying vec2 vT;
+void main() {
+  
+  // transform
+  vec3 vY = vec3( 0.0, 1.0, 0.0 );
+  vec3 vX = cross( vY, camDir);
+  vec4 vP = vec4( vY * (gl_Normal.x == 1 || gl_Normal.x == 2 ? 0.8 : -0.8) + vX * (gl_Normal.x < 2 ? -0.8 : 0.8), 0.0 );
+  gl_Position = gl_ModelViewProjectionMatrix * ( gl_Vertex + vP );
+  
+  // blur
+  float fX;
+  float fW = gl_Position.w;
+  float fA = 1.0;
+  if( fW < 3.0 ) { fX = 0.75; vT.y = 1.0 - fW * 0.333; fA = 0.0; }
+  else if( fW < 4.0 ) { fX = 0.5; vT.y = 1.0 - ( fW - 3.0 ) * 1.0; } 
+  else if( fW < 5.0 ) { fX = 0.25; vT.y = 1.0 - ( fW - 4.0 ) * 1.0; } 
+  else if( fW < 15.0 ) { fX = 0; vT.y = abs( 10.0 - fW ) * 0.2; } 
+  else if( fW < 20.0 ) { fX = 0.25; vT.y = ( fW - 15.0 ) * 0.2; }
+  else if( fW < 30.0 ) { fX = 0.5; vT.y = ( fW - 20.0 ) * 0.1; } 
+  else { fX = 0.75; vT.y = ( fW - 30.0 ) * 0.013; fA = 0.0; }
+  
+  // texcoords
+  vT.x = 1.0 - vT.y;  
+  vT.y *= fA;
+  gl_TexCoord[0] = gl_TexCoord[1] = vec4( gl_Normal.y + fX, gl_Normal.z, 0.0, 0.0 );
+  gl_TexCoord[1].x += 0.25;
+}

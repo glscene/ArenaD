@@ -16,16 +16,16 @@ uses
   Vcl.Controls,
   Vcl.Forms,
   Vcl.Dialogs,
-  GLTexture,
-  GLScene,
-  GLObjects,
-  GLWin32Viewer,
-  GLFileTGA,
-  GLCadencer,
-  GLMaterial,
-  GLCoordinates,
-  GLCrossPlatform,
-  GLBaseClasses;
+  GLS.Texture,
+  GLS.Scene,
+  GLS.Objects,
+  GLS.SceneViewer,
+  GLS.FileTGA,
+  GLS.Cadencer,
+  GLS.Material,
+  GLS.Coordinates,
+  
+  GLS.BaseClasses;
 
 type
   TRGBArray = array [0 .. 32767] of TRGBTriple;

@@ -41,6 +41,7 @@ object Form1: TForm1
     Left = 40
     Top = 16
     object GLDummyCube1: TGLDummyCube
+      ShowAxes = True
       CubeSize = 1.000000000000000000
       object GLCamera1: TGLCamera
         DepthOfView = 100.000000000000000000
@@ -58,7 +59,6 @@ object Form1: TForm1
         Direction.Coordinates = {00000000F304353FF304353F00000000}
         PitchAngle = 45.000000000000000000
         Up.Coordinates = {00000000F304353FF30435BF00000000}
-        Visible = False
         XSamplingScale.Max = 9.000000000000000000
         XSamplingScale.Step = 0.500000000000000000
         YSamplingScale.Max = 9.000000000000000000

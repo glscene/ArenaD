@@ -15,7 +15,7 @@ interface
 
 uses
   Classes,                                                                  
-  GLObjects;
+  GLS.Objects;
 
 
 Type

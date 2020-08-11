@@ -9,9 +9,9 @@ uses
   Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
   Vcl.Imaging.jpeg, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.ComCtrls, Vcl.Buttons,
    
-  GLScene, GLObjects, GLVectorGeometry,
-  GLWin32Viewer, GLCadencer,
-  GLTexture, GLMaterial, GLCoordinates, GLCrossPlatform, GLBaseClasses;
+  GLS.Scene, GLS.Objects, GLS.VectorGeometry,
+  GLS.SceneViewer, GLS.Cadencer,
+  GLS.Texture, GLS.Material, GLS.Coordinates,  GLS.BaseClasses;
 
 type
   TSkyPilotFrm = class(TForm)

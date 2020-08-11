@@ -6,7 +6,7 @@ uses
   Winapi.Windows, System.SysUtils,
   VCL.Graphics,
    
-  GLColor, GLTexture;
+  GLS.Color, GLS.Texture;
 
 const SELDIRHELP: INTEGER = 180;
 

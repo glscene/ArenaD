@@ -138,7 +138,7 @@ interface
 uses
   System.SysUtils,
   System.Math,
-  GLVectorGeometry;
+  GLS.VectorGeometry;
 
 type
 

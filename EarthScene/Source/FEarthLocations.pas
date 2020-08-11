@@ -22,7 +22,7 @@ uses
   VCL.Graphics, VCL.Controls, VCL.Forms, VCL.Dialogs,
   VCL.StdCtrls, VCL.Buttons, VCL.ComCtrls, VCL.ExtCtrls,
    
-  GLTexture, GLColor;
+  GLS.Texture, GLS.Color;
 
 type
   TEarthLocationsFrm = class(TForm)
@@ -154,7 +154,7 @@ begin
   {cbTypes   TypeEdit.Text    ColorPanel.Color}
   cbTypes.Items.Add(TypeEdit.Text);
   Inc(ColorIndex);
-  SetLength(DotColorArray,ColorIndex+1);     {GLTexture}
+  SetLength(DotColorArray,ColorIndex+1);     {GLS.Texture}
   DotColorArray[ColorIndex]:=ConvertWinColor(ColorPanel.Color);
   Application.ProcessMessages;
   SaveTypeList;

@@ -12,17 +12,18 @@ uses
   Vcl.Controls,
   Vcl.Forms,
   Vcl.Dialogs,
-  GLCadencer,
-  GLTexture,
-  GLWin32Viewer,
-  GLScene,
-  GLObjects,
-  GLMaterial,
-  GLFileTGA,
-  GLCoordinates,
-  GLTeapot,
-  GLCrossPlatform,
-  GLBaseClasses;
+  
+  GLS.Cadencer,
+  GLS.Texture,
+  GLS.SceneViewer,
+  GLS.Scene,
+  GLS.Objects,
+  GLS.Material,
+  GLS.FileTGA,
+  GLS.Coordinates,
+  GLS.GeomObjects,
+  
+  GLS.BaseClasses;
 
 type
   TForm1 = class(TForm)

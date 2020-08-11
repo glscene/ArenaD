@@ -1,0 +1,180 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{0257BD66-1C48-4ED1-9B94-9A55AD13B21C}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Stereo\Anaglyph\Anaglyph.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Stereo\StereoRendering\AnaglyphRendering.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Bubbles\bubbles.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Damion\Damion.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="PosteffectFBO\FBOPostEffect.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Fire\FireDemo\FireDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Fire\FireEffect\FireEffect.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Fire\FireGLS\FireFlows.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="MovementSpeed\FireBallTea.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="PFXCursor\PfxCursor.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ReflectionDemo\ReflectionDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ShadowFBO\simpleshadow.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Raycast\raycast.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Anaglyph">
+        <MSBuild Projects="Stereo\Anaglyph\Anaglyph.dproj"/>
+    </Target>
+    <Target Name="Anaglyph:Clean">
+        <MSBuild Projects="Stereo\Anaglyph\Anaglyph.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Anaglyph:Make">
+        <MSBuild Projects="Stereo\Anaglyph\Anaglyph.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AnaglyphRendering">
+        <MSBuild Projects="Stereo\StereoRendering\AnaglyphRendering.dproj"/>
+    </Target>
+    <Target Name="AnaglyphRendering:Clean">
+        <MSBuild Projects="Stereo\StereoRendering\AnaglyphRendering.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AnaglyphRendering:Make">
+        <MSBuild Projects="Stereo\StereoRendering\AnaglyphRendering.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="bubbles">
+        <MSBuild Projects="Bubbles\bubbles.dproj"/>
+    </Target>
+    <Target Name="bubbles:Clean">
+        <MSBuild Projects="Bubbles\bubbles.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="bubbles:Make">
+        <MSBuild Projects="Bubbles\bubbles.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Damion">
+        <MSBuild Projects="Damion\Damion.dproj"/>
+    </Target>
+    <Target Name="Damion:Clean">
+        <MSBuild Projects="Damion\Damion.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Damion:Make">
+        <MSBuild Projects="Damion\Damion.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FBOPostEffect">
+        <MSBuild Projects="PosteffectFBO\FBOPostEffect.dproj"/>
+    </Target>
+    <Target Name="FBOPostEffect:Clean">
+        <MSBuild Projects="PosteffectFBO\FBOPostEffect.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FBOPostEffect:Make">
+        <MSBuild Projects="PosteffectFBO\FBOPostEffect.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FireDemo">
+        <MSBuild Projects="Fire\FireDemo\FireDemo.dproj"/>
+    </Target>
+    <Target Name="FireDemo:Clean">
+        <MSBuild Projects="Fire\FireDemo\FireDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FireDemo:Make">
+        <MSBuild Projects="Fire\FireDemo\FireDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FireEffect">
+        <MSBuild Projects="Fire\FireEffect\FireEffect.dproj"/>
+    </Target>
+    <Target Name="FireEffect:Clean">
+        <MSBuild Projects="Fire\FireEffect\FireEffect.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FireEffect:Make">
+        <MSBuild Projects="Fire\FireEffect\FireEffect.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FireFlows">
+        <MSBuild Projects="Fire\FireGLS\FireFlows.dproj"/>
+    </Target>
+    <Target Name="FireFlows:Clean">
+        <MSBuild Projects="Fire\FireGLS\FireFlows.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FireFlows:Make">
+        <MSBuild Projects="Fire\FireGLS\FireFlows.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FireBallTea">
+        <MSBuild Projects="MovementSpeed\FireBallTea.dproj"/>
+    </Target>
+    <Target Name="FireBallTea:Clean">
+        <MSBuild Projects="MovementSpeed\FireBallTea.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FireBallTea:Make">
+        <MSBuild Projects="MovementSpeed\FireBallTea.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PfxCursor">
+        <MSBuild Projects="PFXCursor\PfxCursor.dproj"/>
+    </Target>
+    <Target Name="PfxCursor:Clean">
+        <MSBuild Projects="PFXCursor\PfxCursor.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PfxCursor:Make">
+        <MSBuild Projects="PFXCursor\PfxCursor.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ReflectionDemo">
+        <MSBuild Projects="ReflectionDemo\ReflectionDemo.dproj"/>
+    </Target>
+    <Target Name="ReflectionDemo:Clean">
+        <MSBuild Projects="ReflectionDemo\ReflectionDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ReflectionDemo:Make">
+        <MSBuild Projects="ReflectionDemo\ReflectionDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="simpleshadow">
+        <MSBuild Projects="ShadowFBO\simpleshadow.dproj"/>
+    </Target>
+    <Target Name="simpleshadow:Clean">
+        <MSBuild Projects="ShadowFBO\simpleshadow.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="simpleshadow:Make">
+        <MSBuild Projects="ShadowFBO\simpleshadow.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="raycast">
+        <MSBuild Projects="Raycast\raycast.dproj"/>
+    </Target>
+    <Target Name="raycast:Clean">
+        <MSBuild Projects="Raycast\raycast.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="raycast:Make">
+        <MSBuild Projects="Raycast\raycast.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Anaglyph;AnaglyphRendering;bubbles;Damion;FBOPostEffect;FireDemo;FireEffect;FireFlows;FireBallTea;PfxCursor;ReflectionDemo;simpleshadow;raycast"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Anaglyph:Clean;AnaglyphRendering:Clean;bubbles:Clean;Damion:Clean;FBOPostEffect:Clean;FireDemo:Clean;FireEffect:Clean;FireFlows:Clean;FireBallTea:Clean;PfxCursor:Clean;ReflectionDemo:Clean;simpleshadow:Clean;raycast:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Anaglyph:Make;AnaglyphRendering:Make;bubbles:Make;Damion:Make;FBOPostEffect:Make;FireDemo:Make;FireEffect:Make;FireFlows:Make;FireBallTea:Make;PfxCursor:Make;ReflectionDemo:Make;simpleshadow:Make;raycast:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

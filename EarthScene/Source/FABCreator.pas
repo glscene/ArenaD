@@ -1,13 +1,13 @@
 unit FABCreator;
 
-{Need to Mix the data requirements
-   from "Earth Demo" and  "Planet Frenzy" Demo}
+// Need to Mix the data requirements from "Earth Demo" and  "Planet Frenzy" Demo
+
 { "Planet Frenzy" Demo. http://jdelauney.free.fr/glscene/planetfrenzy
  Version : PRE-ALPHA 0.1
 
   An idea of Alexandre Hirzel
   Purpose: Shows GLScene users and developers around the world!
-  Eric Grange (GLScene maintainer) is a 'type 0' so is displayed in a
+  Eric Grange (chief GLScene maintainer) is a 'type 0' so is displayed in a
   different colour!
   Credits :
     Aaron Hochwimmer :  Asteroid Maker
@@ -43,7 +43,8 @@ unit FABCreator;
     - Add Space Shuttle .. Artificial Satelites: DIY with 3ds
     - Add Mission Simulation (Lambert's Maths)..DWS .. Eris' Reaver
 }
-{
+
+(*
 Object: MaterialLibrary: M1
          |_LibMatName :MultiPassMat
 
@@ -56,13 +57,12 @@ MultiMaterialShader
 MaterialLibrary : M2 : None
 ... M2.Add
 
-
 MaterialLibrary : M1
          |_MultiPassMat
              |_Shader: MultiMaterialShader
 ... M1.Add Specular
              |_Tex2: Spec2
-}
+*)
 {-----------------------------------------------------------------------------
  Unit Name: GLSpaceEntities
  Author: J.Delauney
@@ -92,23 +92,23 @@ uses
   Vcl.ComCtrls,
   Vcl.Menus,
   Vcl.Imaging.PNGimage,
-  {bmp is internal.. nothing needed}
+  // bmp is internal.. nothing needed
 
   USolarSystem, //Eric: TOrbitalElementsData
     {USolarSystem.pas,  Orbit Elements for Rotation}
 
-  GLVectorTypes,
-  GLPersistentClasses,
-  GLScene,
-  GLVectorGeometry, GLObjects, GLVectorFileObjects, GLGeomObjects,
-  GLTexture, GLCadencer,  GLFile3ds,GLWin32Viewer, GLLensFlare, GLParticles,
+  GLS.VectorTypes,
+  GLS.PersistentClasses,
+  GLS.Scene,
+  GLS.VectorGeometry, GLS.Objects, GLS.VectorFileObjects, GLS.GeomObjects,
+  GLS.Texture, GLS.Cadencer,  GLS.File3DS,GLS.SceneViewer, GLS.LensFlare, GLS.Particles,
 
   ///UFireFxBase,// MRQZZZ 5/5/2003
   ///UGLImposter,
-  GLBitmapFont, GLWindowsFont, GLCoordinates, GLBaseClasses, GLCrossPlatform,
-  GLMaterial, GLImposter, GLColor, GLFileTGA;
+  GLS.BitmapFont, GLS.WindowsFont, GLS.Coordinates, GLS.BaseClasses,
+  GLS.Material, GLS.Imposter, GLS.Color, GLS.FileTGA;
 
-  //GLHUDObjects;
+  //GLS.HUDObjects;
   //TGLHUDSprite = class (TGLSprite)
   //TGLSprite = class (TGLSceneObject)
 
@@ -116,10 +116,10 @@ Type
   TVersionData = record
       MajorVersion  : byte;
       MinorVersion  : byte;
-      Author   : String[26];//Ivan Lee Herring,04Jul2004
+      Author   : String[26]; //Ivan Lee Herring, 04Jul2004
     end;
   TSystemData = record
-      NbSun      : byte;  //ONLY 1 allowed so far
+      NbSun      : byte;     //ONLY 1 allowed so far
       NbPlanet   : byte;
       NbAsteroid : Byte;
       NbComet    : Byte;
@@ -134,8 +134,8 @@ Type
       AxisTilt         : Double;
       nbS3ds           : Byte;
       DocIndex         : Byte;
-      SystemObjectScale      : Double; {Sun ONLY}
-      SystemDistanceScale    : Double; {Sun ONLY}
+      SystemObjectScale      : Double; // Sun ONLY
+      SystemDistanceScale    : Double; // Sun ONLY
     end;
 
    TPlanetData = record
@@ -157,8 +157,10 @@ Type
       Mass, Density            : Double;
       Atmosphere, VelocityType : Byte;
       Velocity, VelocityDir    : Double;
-      {Which way does the wind blow Given a direction .. From or To that direction
-        0 to 100 or 1 to 100 is that 100 or 101}
+      (*
+       Which way does the wind blow Given a direction .. From or To that direction
+       0 to 100 or 1 to 100 is that 100 or 101
+      *)
     end;
    TMoonRingData = record //3ds files and DebrisAsteroid  too
       Name            : String[255];{Planet_Moon.jpg}
@@ -4424,7 +4426,7 @@ begin       {Going away or Not too close: WheelDelta Value is 120 or -120}
       f:=PowerSingle(1.05, WheelDelta*(1/120));
       GLCamera.AdjustDistanceToTarget(f);
       CameraDistanceLabel.Caption:=
-      //FloatToStrF(Value: Double;
+      //FloatToStrF(Value: Extended;
                    //Format: TFloatFormat;Precision, Digits: Integer): string;
       FloatToStrF(GLCamera.Position.VectorLength,
                   ffFixed, 18,2);

@@ -6,9 +6,9 @@ interface
 uses
   Winapi.OpenGL,
   System.Math,
-  GLVectorGeometry,
-  GLVectorFileObjects,
-  GLScene;
+  GLS.VectorGeometry,
+  GLS.VectorFileObjects,
+  GLS.Scene;
 
 // Cube of radius 1 centred on the origin
 procedure BuildCube(const Tile: double = 1);
