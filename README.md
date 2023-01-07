@@ -1,2 +1,2 @@
-# ExamplesD
-The demos and examples of GLScene for Delphi
+# SamplesD
+The source code samples based on GLScene for Delphi
