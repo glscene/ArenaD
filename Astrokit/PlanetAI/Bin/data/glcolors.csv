@@ -1,0 +1,44 @@
+Identifier,Red,Green,Blue,Hex
+Apples,1,0,0,FF0000
+Oranges,1,0.8,0,FFCC00
+Apple Trees,0,1,0,00FF00
+Orange Trees,1,0.5,0,FF8000
+Apple Seeds,0.7,0,0,B20000
+Orange Seeds,0.7,0.2,0.2,B23333
+Birds,0.9,0.9,1,E6E6FF
+Fish,1,0.5,0.1,FF801A
+Ducks,0.4,0.2,0.2,663333
+Crabs,0.6,0,0,990000
+Hawks,0.6,0,0.4,990066
+Turtles,0,0.6,0,009900
+Clouds,1,1,1,FFFFFF
+Icebergs,0,1,1,00FFFF
+LadyBugs,1,0,0,FF0000
+Ants,0.8,0,1,CC00FF
+Suns,1,0.2,0.1,FF331A
+Moons,0,0,1,0000FF
+Communities,0.1,0.5,0.8,1A80CC
+Asteroids,0,0,0,000000
+Sharks,0,0,1,0000FF
+Aqua Plants,0,1,0,00FF00
+Bots,0,0.7,0.7,00B2B2
+Explosions,0,0,0,000000
+Flocks,0.4,0.6,0,669900
+Balls,0,0.8,0.7,00CCB2
+Bombs,0,0,0,000000
+Grazers,0,1,0,00FF00
+Trexes,0,0,1,0000FF
+Weapons,0,0,0,000000
+Lightning,0.5,1,1,80FFFF
+Beacons,0,0,0,000000
+Terriers,0,0,0,000000
+Foxes,0,0,0,000000
+Rabbits,0,0,0,000000
+Grass,0,1,0,00FF00
+Mice,0,0,0,000000
+Tigers,0,0,0,000000
+Dolphins,0,0,0,000000
+Earthquakes,0,0,0,000000
+Evolving Trees,1,0,0,FF0000
+Evolving Fruits,0,1,0,00FF00
+Evolving Seeds,0,0,1,0000FF

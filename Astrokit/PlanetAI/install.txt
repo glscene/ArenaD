@@ -1,0 +1,33 @@
+
+
+Installing AIPlanet codebase:
+
+-----------------------
+
+Download and install TortoiseSVN:
+address:
+https://sourceforge.net/p/glscene/code/HEAD/tree/branches/Examples/Astronomy/AIPlanet/
+
+
+Installing GLScene
+---------------
+- First install GLScene from SF or GitHub
+- Compile and Install GLScene into Delphi
+
+Compiling AIPlanet
+------------------
+You will have a directory structure as follows:
+aiplanet\Bin		- contains the exe
+aiplanet\Code		- engine code
+aiplanet\Interface	- graphics code
+aiplanet\Project	- project info
+
+
+Contributing to AIPlanet or GLScene
+--------------------------
+Create an account on Sourceforge.net
+
+You can participate in discussions or create a topic in
+https://sourceforge.net/p/glscene/discussion/
+
+

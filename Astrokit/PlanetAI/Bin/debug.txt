@@ -1,0 +1,181 @@
+artificial planet v0.9.5.949
+
+Exception Type: EAccessViolation
+Application Name: aiplanet.exe.
+Error Message: Access violation at address 004BB04C in module 'aiplanet.exe'. Read of address 00000078
+Registry settings: -LoadOnStartup=yes-AutoSave=no-SplashStart=no-SplashExit=yes-InvertMouse=no-InvertPlanet=yes-Version=951-WorkingFile=new.air-InvertMouseWheel=no-Auto3DView=no-TipOfTheDay=no-RememberView=yes-ViewAligned=no-ViewSizeX=872-ViewSizeY=545
+Construction-------
+Detected monitors = 2
+Loading settings... done.
+Creating f3DEnvironment...
+Loading files...
+
+Loading material library:
+---------------------------------
+Loading texture landtex from file: textures\alltex.bmp... done.
+Loading texture sun from file: textures\sunfire.bmp... done.
+Loading texture moon from file: textures\moonshine.bmp... done.
+Loading texture highlighter from file: textures\highlighter.bmp... done.
+Loading texture cloud from file: textures\cloud-tex.bmp... done.
+Loading texture glacier from file: textures\glacier.bmp... done.
+Loading texture beachball from file: textures\beachball.jpg... done.
+Loading texture soccer from file: textures\soccer.jpg... done.
+Loading texture rock from file: textures\rock.jpg... done.
+
+Loading models library:
+---------------------------------
+Loading model from file: models\newtree.3ds... done.
+Loading model from file: models\orangetree.3ds... done.
+Loading model from file: models\fruit.3ds... done.
+Loading model from file: models\fruit.3ds... done.
+Loading model from file: models\seed.3ds... done.
+Loading model from file: models\spirit.3ds... done.
+Loading model from file: models\fish.3ds... done.
+Loading model from file: models\fish-female.3ds... done.
+Loading model from file: models\asteroid.3ds... done.
+Loading model from file: models\asteroid.3ds... done.
+Loading model from file: models\asteroid.3ds... done.
+Loading model from file: models\rain.3ds... done.
+Loading model from file: models\rain.3ds... done.
+Loading model from file: models\dynamite.3ds... done.
+Loading model from file: models\birddead.3ds... done.
+Loading model from file: models\bird-1.3ds... done.
+Loading model from file: models\bird-2.3ds... done.
+Loading model from file: models\bird-3.3ds... done.
+Loading model from file: models\bird-4.3ds... done.
+Loading model from file: models\bird-sit.3ds... done.
+Loading model from file: models\crab.3ds... done.
+Loading model from file: models\hawk.3ds... done.
+Loading model from file: models\grazer.3ds... done.
+Loading model from file: models\tyranno.3ds... done.
+Loading model from file: models\weapon.3ds... done.
+Loading model from file: models\dynamite.3ds... done.
+Loading model from file: models\shark.3ds... done.
+Loading model from file: models\turtle.3ds... done.
+Loading model from file: models\beacon.3ds... done.
+Loading model from file: models\terrier.3ds... done.
+Loading model from file: models\terrier.3ds... done.
+Loading model from file: models\grazer.3ds... done.
+Loading model from file: models\grassblade.3ds... done.
+Loading model from file: models\iceberg.3ds... done.
+Loading model from file: models\grazer.3ds... done.
+Loading model from file: models\grazer.3ds... done.
+Loading model from file: models\duck.3ds... done.
+Loading model from file: models\dolphin1.3ds... done.
+Loading model from file: models\dolphin2.3ds... done.
+Loading model from file: models\dolphin3.3ds... done.
+Loading model from file: models\dolphin4.3ds... done.
+Loading model from file: models\aquaplant.3ds... done.
+Loading model from file: models\ladybug.3ds... done.
+Loading model from file: models\ant.3ds... done.
+Loading model from file: models\ant2.3ds... done.
+Loading model from file: models\ant3.3ds... done.
+Loading model from file: models\cloud.3ds... done.
+Loading model from file: models\newtree.3ds... done.
+Loading model from file: models\fruit.3ds... done.
+Loading model from file: models\seed.3ds... done.
+Activating GLBass...
+
+Loading sounds
+---------------------------------
+Loading sound from file audio\electronicping.wav...  done.
+Loading sound from file audio\fire.wav...  done.
+Loading sound from file audio\quake3.wav...  done.
+Loading sound from file audio\lightrainloop.wav...  done.
+Loading sound from file audio\nightengale.wav...  done.
+Loading sound from file audio\waterdrop.wav...  done.
+Loading sound from file audio\bird-die.wav...  done.
+Loading sound from file audio\incoming.wav...  done.
+Loading sound from file audio\cricket.wav...  done.
+Loading sound from file audio\crunch.wav...  done.
+Loading sound from file audio\explode.wav...  done.
+Loading sound from file audio\forest.wav...  done.
+Loading sound from file audio\hawk.wav...  done.
+Loading sound from file audio\lion.wav...  done.
+Loading sound from file audio\nightengale.wav...  done.
+Loading sound from file audio\ohhh.wav...  done.
+Loading sound from file audio\pigeon.wav...  done.
+Loading sound from file audio\sparrow.wav...  done.
+Loading sound from file audio\707kick.wav...  done.
+Loading sound from file audio\bliptick.wav...  done.
+Loading sound from file audio\snare1.wav...  done.
+Loading sound from file audio\rocksmash.wav...  done.
+Loading sound from file audio\throw.wav...  done.
+Loading sound from file audio\uproot.wav...  done.
+Loading sound from file audio\watersplash.wav...  done.
+Loading sound from file audio\mouse1.wav...  done.
+Loading sound from file audio\mouse2.wav...  done.
+Loading sound from file audio\tiger.wav...  done.
+Loading sound from file audio\quack.wav...  done.
+Loading sound from file audio\duckling.wav...  done.
+Generating sound system...
+Generating sound system... 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 
+21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 
+47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63
+Adding stars... done.
+Changed Camera Mode = camPlanet
+Creating fEventsForm...
+Creating SpiritList...
+Changed Camera Mode = camPlanet
+Changed Camera Mode = camPlanet
+Cleaning galaxy...
+Building planet...
+Planet.Map: Height = 11 Width = 20
+Planet.Mesh: Triangles = 1760 Vertices = 5280
+Planet.Freeform: Triangles = 1760
+Planet.BuildOctree: passed
+Water.Mesh: Triangles = 880 Vertices = 2640
+Water.Freeform: Triangles = 880
+Atmosphere.Freeform: Triangles = 760
+Adding new things...
+Turned collisions on.
+Running...
+Still running...
+Changed Camera Mode = camFree
+THING COUNTERS
+------------------
+Apples = 0
+Oranges = 0
+Apple Trees = 0
+Orange Trees = 0
+Apple Seeds = 0
+Orange Seeds = 0
+Birds = 0
+Fish = 0
+Ducks = 0
+Crabs = 0
+Hawks = 0
+Turtles = 0
+Clouds = 0
+Icebergs = 0
+LadyBugs = 0
+Ants = 0
+Suns = 0
+Moons = 0
+Communities = 0
+Asteroids = 0
+Sharks = 0
+Aqua Plants = 0
+Bots = 0
+Explosions = 0
+Flocks = 0
+Balls = 0
+Bombs = 0
+Grazers = 0
+Trexes = 0
+Vibes = 0
+Weapons = 0
+Lightning = 0
+Beacons = 0
+Terriers = 0
+Foxes = 0
+Rabbits = 0
+Grass = 0
+Mice = 0
+Tigers = 0
+Dolphins = 0
+Earthquakes = 0
+Evolving Trees = 0
+Evolving Fruits = 0
+Evolving Seeds = 0
+------------------

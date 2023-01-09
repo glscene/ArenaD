@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{12D47090-1574-4574-B85A-2092ED3CFBEE}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="..\Molecule\MoleculeD.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Molecule\MoleculeC.cbproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="MoleculeD">
+        <MSBuild Projects="..\Molecule\MoleculeD.dproj"/>
+    </Target>
+    <Target Name="MoleculeD:Clean">
+        <MSBuild Projects="..\Molecule\MoleculeD.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MoleculeD:Make">
+        <MSBuild Projects="..\Molecule\MoleculeD.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MoleculeC">
+        <MSBuild Projects="..\Molecule\MoleculeC.cbproj"/>
+    </Target>
+    <Target Name="MoleculeC:Clean">
+        <MSBuild Projects="..\Molecule\MoleculeC.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MoleculeC:Make">
+        <MSBuild Projects="..\Molecule\MoleculeC.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="MoleculeD;MoleculeC"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="MoleculeD:Clean;MoleculeC:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="MoleculeD:Make;MoleculeC:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,46 @@
+0. Undecided Dabbler: (Default) [clrSilver]
+1. GLS Developer: [clrMandarinOrange]
+2. Content Creator: [clrYellow]
+3. Game Developer: FPS [clrBlue]
+4. Game Developer: RTS Sim [clrRed]
+5. VR Simulation: [clrPurple]
+6. Scientific Visualization: [clrLime]
+7. Others: [clrFlesh]
+
+
+DESCRIPTIONS:
+0. Undecided Dabbler (Default)[Silver]
+Dabbler - for programmers interested in 3D but without a development driving them yet. Just want to play with how 3D is done and make some interesting effects.
+
+1. GLS Developer [Orange]
+Main intent is to Develop the GLScene Library... Kind of a Guru Dabbler
+
+2. Content Creator [Yellow]
+Content Creator (animation/modeling tools like Cosmos4D, 
+eMNGma, Bathroom Designer; as a paint program, Nelson's VCB would be here)
+
+3. Game Developer FPS [Blue]
+Defined Description of specific game style in Type Name and Description
+
+4. Game Developer RTS Sim [Red]
+Simulation games to my mind are things like flight programs, "realistic" war games where there is an attempt to simulate on screen another reality. The driver is that it must look real and that is how the simulation is judged .. usually with accepted tradeoffs of FPS and playability. Terrain Considerations: FPS must high, can use artwork to hide problems. Surface is simple and can be conditioned at will to fit other objects. (fi flatten it slightly to place a building)  Procedural textures or static preshaded, high detail textures. Cheap shadows fine. Coolness rules.
+
+5. VR Simulation [Purple]
+[Simulator (MAGSim, Micrometer, Robotic Arm)]
+Non-game simulation is driven less by FPS and more by reality. No artwork
+fudges and shortcuts in the physics driven less by need for speed.
+Terrain Considerations: (fly through of actual city)  FPS not so critical. Fitting objects to terrain can be issue as the terrain is static. Textures are realworld, large and static. May require very detailed shadows (will that new building shade me in winter?). Reality rules. 
+Data Considerations: real data but creating a synthesized object to display.. from
+physics..math based on data gathered.. often to display an object that there is NO DATA for... or does not exist. "Not necessarily" real data but real world laws rule on sims.
+
+6. Scientific Visualization [Light Green]
+[Visualizer/Viewer (MVE, WXtrackGL, Lithology)]
+Visualization. (eg surface defining the seal on a oil reservoir at 6km underground). Terrain Considerations: Height coloured, contoured, labelled, FPS minor concern, no shadows/fog. Maybe overlaid with other static textures (eg seismic reflectance as a variable stipple). Clarity rules. Data Considerations: working from Real data.. to SEE the data. Visualisation of scientific data sets is more akin to graphing. Surfaces will be height-shaded and contoured. Fog/Shadows killed because they hide data. Lots of labeling. Perspective truth is irrelevant, and often FPS is ignored... SPF (Seconds Per Frame) is acceptable... Days Per Frame can be accomodated.
+
+7. Others..Various [Flesh]
+(e.g. GUI projects like Workspace 3D) (Graphics research) 
+'graphics research' is about developing new techniques. e.g. simulating clouds on the GPU. In this context, GLScene could be used for implementing the software prototype.
+Each Actual Project is to be fully defined in its Type Name and Description.
+
+
+

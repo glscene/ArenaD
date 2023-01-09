@@ -1,0 +1,27 @@
+AIPLANET VERSION 2
+--------------------------------
+MAJOR FEATURES:
+-Online servers
+-Visual Clients
+-Remote-controlled client bots, ai or human
+-Online collaboration/development
+
+SECONDARY FEATURES:
+-Scriptable AIs
+-Downloadable creatures that dont require recompile
+-Dynamically generated interface
+
+ENGINE FEATURES:
+-All object definitions stored in text file
+-Multiple terrain types (aiterrain or premade)
+-Complete visualization of AIs (sight lines, senses, history, tracking, etc)
+-AIGod completely interactive user interface
+-Event Scheduler
+-Environmental Contraints
+-ODE Physics
+-True 3D terrain
+
+
+
+
+

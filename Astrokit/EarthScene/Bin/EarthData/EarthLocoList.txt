@@ -1,0 +1,8 @@
+0. Undecided Dabbler (Default)
+1. GLS Developer
+2. Content Creator
+3. Game Developer: FPS
+4. Game Developer: RTS Sim
+5. VR Simulation
+6. Scientific Visualization
+7. Others

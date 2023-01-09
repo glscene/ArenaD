@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{B960C1AE-3EA3-43D8-A9C6-C484F09AA168}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="RelogioD.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="RelogioC.cbproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="RelogioD">
+        <MSBuild Projects="RelogioD.dproj"/>
+    </Target>
+    <Target Name="RelogioD:Clean">
+        <MSBuild Projects="RelogioD.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="RelogioD:Make">
+        <MSBuild Projects="RelogioD.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="RelogioC">
+        <MSBuild Projects="RelogioC.cbproj"/>
+    </Target>
+    <Target Name="RelogioC:Clean">
+        <MSBuild Projects="RelogioC.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="RelogioC:Make">
+        <MSBuild Projects="RelogioC.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="RelogioD;RelogioC"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="RelogioD:Clean;RelogioC:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="RelogioD:Make;RelogioC:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
