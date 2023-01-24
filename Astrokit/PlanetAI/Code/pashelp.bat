@@ -1,1 +1,0 @@
-pasdoc *.pas -o help

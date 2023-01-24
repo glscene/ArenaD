@@ -1,1 +1,0 @@
-stripreloc.exe aiplanet.exe
