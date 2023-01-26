@@ -1,0 +1,14 @@
+-27430275.6534316	-3.22170993813766E22	150441123.21704	3.31220732717702E22	-27430275.6534316	-3.22170993813766E22	150441123.21704	3.31220732717702E22	0.25	Tahoma		11	2	5	5	50	50	1	1	1	1	1	64000	1	15793151	15790320	255	32768	8421504	32896	32896	8421376	15780518	128	0	0	2	1
+0.1*((x-5.0E6)^3-5*(x-5.0E6)^2-12*(x-5.0E6))-0.5	0.1((x-5.0E6)^3 -5(x-5.0E6)^2 -12(x-5.0E6))-0.5	1	1	16711680	0.100000001490116	-3.14159265358979	3.14159265358979	3689004.55432661	-1.1685393258427E21	-1	-1	0	0	-1
+0
+1
+Text Block	70000000	2E22	23	Times New Roman	fsBold	16	4227072	-1
+8
+This function has very large values.	4227072
+Click X Axis as Log.	4227072
+Then drag the plot to the left so that this text is centred.	4227072
+Then Click Y Axis as Log.	6558863
+Click the Evaluate button in the functions window	6558863
+and enter 3E7 it should then show y = 1.56249968749997E21	6558863
+Return to linear Axes and click on Restore.	9003803
+To Edit this text use Menu/View/Text Blocks...	0

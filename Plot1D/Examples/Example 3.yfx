@@ -1,0 +1,13 @@
+-3.30761309342391	-3.90348178948588	11.6535130004766	3.8037150568333	-3.30761309342391	-3.91118128683485	11.6535130004766	3.79601555948433	0.280000001192093	Tahoma		12	2	5	5	50	50	1	1	2	3	3	64000	1	15793151	12632256	255	32768	8421504	32896	32896	8421376	15780518	128	0	0	1	2
+2*abs(ln(sec(x/2)))-1.35	2abs(ln(sec(x/2)))-1.35	1	1	766000	0.00100000004749745	-2.61799387799149	2.61799387799149	2.7	1	-1	-1	-1	0	-1
+tan(x/2)	tan(x/2)	1	1	16711680	0.00100000004749745	-2.61799387799149	2.61799387799149	2.7	3	-1	-1	-1	0	-1
+0
+1
+Text Block	2.5	-0.1	20	Tahoma		12	16711680	-1
+6
+One of the many integrals of y = tan(x/2) is 2abs(ln(sec(x/2)))-1.35	16711680
+Highlight y = tan(x/2) in the functions list, then click Menu/Integrate/Definite Integral.	16711680
+The integral will be plotted but it will not correspond with 2abs(ln(sec(x/2)))-1.35	8421631
+If you click on the "Centre to x axis" button in the Integration window the two graphs will correspond. 	8421631
+The value in the "Integral y at a = x1:" edit field will now be 1.35162612902.	8421631
+Change the function y = 2abs(ln(sec(x/2)))-1.35 to 2abs(ln(sec(x/2)))-1.35162612902 for a more precise match.	5812224

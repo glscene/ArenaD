@@ -1,0 +1,58 @@
+-10.1185353208036	-10.2	10.8314646791964	10.95	-10.1185353208036	-10.2	10.8314646791964	10.95	0.25	Tahoma		9	2	5	5	50	50	1	1	1	1	1	64000	1	15793151	12632256	255	32768	8421504	32896	32896	8421376	15780518	128	0	0	1	1
+		1	1	16711680	0.100000001490116	-3.14159265358979	3.14159265358979	2.11474400518471	1.38576567317575	-1	-1	0	0	0
+0
+2
+Help 1	-10	10	20	Tahoma	fsBold	12	128	-1
+35
+When the application is opened for the first time it should appear	128
+as shown here, except that the text will not appear but a grid will be shown.	128
+To the right there should be two windows, the top window contains	128
+a field with the label 'y = f(x)'. Below this is a list of functions.	128
+This list cannot be empty, however it can contain a blank entry as it	128
+does now.	128
+If a function is entered the graph for that function will be displayed	128
+as well as a label containing that function.	128
+	128
+As an example try entering x in the function field.	128
+	128
+There are other fields which can be altered to change the way the	128
+graph is displayed.	128
+The increment field can be altered either by entering a number or	128
+by using the up down buttons to the right of the field.	128
+If that number is not an integer or is less than 1 an integer number	128
+will be used.	128
+A very large increment will produce a graph that is less accurate. 	128
+	128
+There are two fields associated with the 'Label (x, y)' label.	128
+This is the position of the function's label displayed on the graph.	128
+	128
+	128
+The position of the function's label can be altered either by entering	128
+different coordinates such as 2 and 6 or by dragging the label to a	128
+new location using the left button of the mouse. 	128
+{Try it to see how the label is relocated}	128
+The function label need not appear on the graph, just click on	128
+the 'Show function label' check box.	128
+The function itself will only be displayed if the	128
+check box next to the function is checked.	128
+The appearance of the graph can be altered by	128
+altering the 'Plot Pen Width' and 'Pen colour'.	128
+The other fields in this window will be	128
+explained later.	128
+Help 2	0.55	-0.5	26	Arial		16	32768	-1
+15
+Now look at the lower right window.	32768
+The plot range is displayed in the first four fields.	32768
+If the 'Save' button is pressed these values will be saved so that	32768
+you can return to the current plot range if the plot range is altered.	32768
+The plot range can be altered either by entering values in these fields	32768
+or by using the mouse.	32768
+Just use left button of the mouse to drag the graph to a new position.	32768
+If the 'Ctrl' button is held down while dragging the axes will be altered	32768
+differently depending on which way the mouse is dragged, left or right or	32768
+up or down.	32768
+Use the mouse wheel or the '+' / '-' keys of the numeric key pad to zoom	32768
+in or out	32768
+The 'up' 'down' 'left' and 'right' keys of the numeric key pad can be used	32768
+as well.	32768
+{Try it to see the effect.}	32768
