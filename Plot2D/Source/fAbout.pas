@@ -12,17 +12,19 @@ uses
   Vcl.Controls,
   Vcl.Forms,
   Vcl.Dialogs,
-  Vcl.ExtCtrls, Vcl.StdCtrls;
+  Vcl.ExtCtrls,
+  Vcl.StdCtrls;
 
 type
   TAboutForm = class(TForm)
     Panel1: TPanel;
     Panel2: TPanel;
-    Label1: TLabel;
+    PanelCentre: TPanel;
+    MemoContributors: TMemo;
+    Button1: TButton;
+    procedure Button1Click(Sender: TObject);
   private
-    { Private declarations }
   public
-    { Public declarations }
   end;
 
 var
@@ -33,5 +35,10 @@ implementation
 //==========================================================================
 
 {$R *.dfm}
+
+procedure TAboutForm.Button1Click(Sender: TObject);
+begin
+  MemoContributors.Visible := not MemoContributors.Visible;
+end;
 
 end.

@@ -3,77 +3,75 @@ object AboutForm: TAboutForm
   Top = 0
   BorderStyle = bsDialog
   Caption = 'About'
-  ClientHeight = 252
-  ClientWidth = 441
+  ClientHeight = 267
+  ClientWidth = 420
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -14
+  Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
   Position = poScreenCenter
-  PixelsPerInch = 120
-  TextHeight = 17
+  TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 441
-    Height = 153
-    Margins.Left = 4
-    Margins.Top = 4
-    Margins.Right = 4
-    Margins.Bottom = 4
+    Width = 420
+    Height = 74
     Align = alTop
-    Caption = 'Plot1D v.3'
+    Caption = 'Plot1Ds v.3'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -24
+    Font.Height = -19
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    object Label1: TLabel
-      Left = 60
-      Top = 112
-      Width = 343
-      Height = 24
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
-      ParentCustomHint = False
-      BiDiMode = bdLeftToRight
-      Caption = 'based on initial code by Eric Hardinger'
-      Color = clBtnFace
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -20
-      Font.Name = 'Tahoma'
-      Font.Style = []
-      ParentBiDiMode = False
-      ParentColor = False
-      ParentFont = False
-      ParentShowHint = False
-      ShowHint = False
-    end
   end
   object Panel2: TPanel
     Left = 0
-    Top = 153
-    Width = 441
-    Height = 99
-    Margins.Left = 4
-    Margins.Top = 4
-    Margins.Right = 4
-    Margins.Bottom = 4
-    Align = alClient
-    Caption = 'Copyright '#169' GLScene Team'
+    Top = 224
+    Width = 420
+    Height = 43
+    Align = alBottom
+    Caption = 'Copyright '#169' GLS Team'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -16
+    Font.Height = -13
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+  end
+  object PanelCentre: TPanel
+    Left = 0
+    Top = 74
+    Width = 420
+    Height = 150
+    Align = alClient
+    Caption = ' '
+    TabOrder = 2
+    object MemoContributors: TMemo
+      Left = 72
+      Top = 63
+      Width = 265
+      Height = 58
+      Alignment = taCenter
+      Lines.Strings = (
+        'Eric Hardinger'
+        'Eric Grange'
+        'Pavel Vassiliev')
+      TabOrder = 0
+      Visible = False
+    end
+    object Button1: TButton
+      Left = 104
+      Top = 23
+      Width = 201
+      Height = 25
+      Caption = 'Developers and Contributors'
+      TabOrder = 1
+      OnClick = Button1Click
+    end
   end
 end

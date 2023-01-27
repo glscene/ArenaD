@@ -1,8 +1,8 @@
 object ViewForm: TViewForm
   Left = 69
   Top = 77
-  ClientHeight = 750
-  ClientWidth = 1098
+  ClientHeight = 553
+  ClientWidth = 878
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -25,13 +25,13 @@ object ViewForm: TViewForm
   object GLSViewer: TGLSceneViewer
     Left = 0
     Top = 0
-    Width = 1098
-    Height = 731
+    Width = 878
+    Height = 534
     Cursor = crHandPoint
     Camera = Camera
     Buffer.BackgroundColor = clActiveCaption
     Buffer.ContextOptions = [roDoubleBuffer, roRenderToWindow]
-    FieldOfView = 122.625427246093800000
+    FieldOfView = 106.328903198242200000
     PenAsTouch = False
     Align = alClient
     OnMouseDown = GLSViewerMouseDown
@@ -41,8 +41,8 @@ object ViewForm: TViewForm
   end
   object StatusBar: TStatusBar
     Left = 0
-    Top = 731
-    Width = 1098
+    Top = 534
+    Width = 878
     Height = 19
     Cursor = crHandPoint
     Color = clCream
@@ -67,6 +67,8 @@ object ViewForm: TViewForm
         Alignment = taCenter
         Width = 50
       end>
+    ExplicitTop = 731
+    ExplicitWidth = 1098
   end
   object GLScene1: TGLScene
     Left = 64

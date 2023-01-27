@@ -3,8 +3,8 @@ object AboutForm: TAboutForm
   Top = 0
   BorderStyle = bsDialog
   Caption = 'About'
-  ClientHeight = 248
-  ClientWidth = 358
+  ClientHeight = 267
+  ClientWidth = 420
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,45 +16,25 @@ object AboutForm: TAboutForm
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 358
-    Height = 174
+    Width = 420
+    Height = 74
     Align = alTop
-    Caption = 'Plot2D v.3'
+    Caption = 'Plot2Ds v.3'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -24
+    Font.Height = -19
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
     TabOrder = 0
-    object Label1: TLabel
-      Left = 24
-      Top = 128
-      Width = 324
-      Height = 19
-      ParentCustomHint = False
-      BiDiMode = bdLeftToRight
-      Caption = 'based on initial source code by Eric Hardinger'
-      Color = clBtnFace
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -16
-      Font.Name = 'Tahoma'
-      Font.Style = []
-      ParentBiDiMode = False
-      ParentColor = False
-      ParentFont = False
-      ParentShowHint = False
-      ShowHint = False
-    end
   end
   object Panel2: TPanel
     Left = 0
-    Top = 174
-    Width = 358
-    Height = 74
-    Align = alClient
-    Caption = 'Copyright '#169' GLScene Team'
+    Top = 224
+    Width = 420
+    Height = 43
+    Align = alBottom
+    Caption = 'Copyright '#169' GLS Team'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -62,5 +42,36 @@ object AboutForm: TAboutForm
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+  end
+  object PanelCentre: TPanel
+    Left = 0
+    Top = 74
+    Width = 420
+    Height = 150
+    Align = alClient
+    Caption = ' '
+    TabOrder = 2
+    object MemoContributors: TMemo
+      Left = 72
+      Top = 63
+      Width = 265
+      Height = 58
+      Alignment = taCenter
+      Lines.Strings = (
+        'Eric Hardinger'
+        'Eric Grange'
+        'Pavel Vassiliev')
+      TabOrder = 0
+      Visible = False
+    end
+    object Button1: TButton
+      Left = 104
+      Top = 23
+      Width = 201
+      Height = 25
+      Caption = 'Developers and Contributors'
+      TabOrder = 1
+      OnClick = Button1Click
+    end
   end
 end

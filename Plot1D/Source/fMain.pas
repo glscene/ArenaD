@@ -160,8 +160,6 @@ procedure TMainForm.FormCreate(Sender: TObject);
 begin
   BinPath :=  ExtractFilePath(ParamStr(0));
   BinPath := IncludeTrailingPathDelimiter(BinPath);
-///  PlotPath := BinPath;
-///  Delete(PlotPath, Length(PlotPath) - 4, 4);
   DataPath := BinPath + 'Examples\';
 
   PrinterExists := Printer.Printers.Count > 0;
