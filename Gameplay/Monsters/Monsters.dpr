@@ -2,7 +2,7 @@ program Monsters;
 
 uses
   Forms,
-  Unit1 in 'Unit1.pas' {Form1};
+  fMonsters in 'fMonsters.pas' {Form1};
 
 {$R *.res}
 

@@ -54,7 +54,7 @@ type
     CentroCube: TGLDummyCube;
     AnguloCube: TGLDummyCube;
     Walls: TGLCylinder;
-    Ground: TGLDisk;
+    diskGround: TGLDisk;
     GLFireFXManager1: TGLFireFXManager;
     ScreenFont: TGLWindowsBitmapFont;
     Help: TGLHUDText;
@@ -114,13 +114,13 @@ end;
 procedure TForm1.HandleKeys(const deltaTime: Double);
 const
   cTurnSpeed = 100;
-  cMoveSpeed = 9;
+  cMoveSpeed = 10;  // Esfera's run or walk
 begin
-  If not Dead then
+  if not Dead then
   begin
-    if IsKeyDown('a') or IsKeyDown(VK_LEFT) then
+    if isKeyDown('a') or isKeyDown(VK_LEFT) then
       ActorCube.Turn(-cTurnSpeed * deltaTime);
-    if IsKeyDown('d') or IsKeyDown(VK_RIGHT) then
+    if isKeyDown('d') or isKeyDown(VK_RIGHT) then
       ActorCube.Turn(cTurnSpeed * deltaTime);
 
     If IsKeyDown(VK_CONTROL) then
@@ -180,10 +180,10 @@ begin
         begin
           TGLBInertia(CentroCube.Behaviours.Behaviour[0]).TurnSpeed := 0;
           TGLBInertia(AnguloCube.Behaviours.Behaviour[0]).TurnSpeed := 0;
-          GLFireFXManager1.RingExplosion(8, 10, 5, XVector, ZVector);
+          GLFireFXManager1.RingExplosion(8, 10, 5, XVector, ZVector, -1);
           Actor2.Visible := False;
           Points := Points + 10;
-          Form1.Caption := 'Points: ' + inttostr(Points);
+          Form1.Caption := 'Points: ' + IntToStr(Points);
         end
         else if not(Actor2.CurrentAnimation = 'walk') then
           Actor2.SwitchToAnimation('walk');
@@ -258,10 +258,8 @@ begin
   if Esfera.Visible then
   begin
     Esfera.Direction := ActorCube.Direction;
-    If Esfera.DistanceTo(CentroCube) < 25 then
-    begin
+    if (Esfera.DistanceTo(CentroCube) < 25) then
       Esfera.Move(3);
-    end;
   end;
 end;
 
