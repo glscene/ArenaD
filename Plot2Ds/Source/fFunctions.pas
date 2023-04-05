@@ -24,6 +24,7 @@ uses
   Vcl.ImgList,
   Vcl.ExtCtrls,
 
+  GLS.OpenGLTokens,
   GLS.VectorGeometry,
   GLS.Coordinates,
   GLS.Color,

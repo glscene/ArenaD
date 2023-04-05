@@ -3,118 +3,93 @@ object EvaluateForm: TEvaluateForm
   Top = 362
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
-  ClientHeight = 310
-  ClientWidth = 400
+  ClientHeight = 248
+  ClientWidth = 320
   Color = clCream
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -14
+  Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   FormStyle = fsStayOnTop
   KeyPreview = True
   Position = poScreenCenter
   ShowHint = True
-  PixelsPerInch = 120
-  TextHeight = 16
+  TextHeight = 13
   object GroupBox1: TGroupBox
-    Left = 10
-    Top = 6
-    Width = 381
-    Height = 294
-    Margins.Left = 4
-    Margins.Top = 4
-    Margins.Right = 4
-    Margins.Bottom = 4
+    Left = 8
+    Top = 5
+    Width = 305
+    Height = 235
     Caption = '  Evaluate function  '
     ParentShowHint = False
     ShowHint = True
     TabOrder = 0
     object Labe1: TLabel
-      Left = 24
-      Top = 25
-      Width = 85
-      Height = 16
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Left = 19
+      Top = 20
+      Width = 68
+      Height = 13
       Alignment = taRightJustify
       AutoSize = False
       Caption = 'Enter X value:'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -14
+      Font.Height = -11
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
     end
     object Label2: TLabel
-      Left = 24
-      Top = 53
-      Width = 85
-      Height = 16
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Left = 19
+      Top = 42
+      Width = 68
+      Height = 13
       Alignment = taRightJustify
       AutoSize = False
       Caption = 'Enter Y value:'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -14
+      Font.Height = -11
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
     end
     object Label3: TLabel
-      Left = 21
-      Top = 81
-      Width = 85
-      Height = 17
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Left = 17
+      Top = 65
+      Width = 68
+      Height = 13
       Alignment = taRightJustify
       AutoSize = False
       Caption = 'Z value:'
       Font.Charset = ANSI_CHARSET
       Font.Color = clMaroon
-      Font.Height = -14
+      Font.Height = -11
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object Label6: TLabel
-      Left = 5
-      Top = 254
-      Width = 70
-      Height = 16
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Left = 4
+      Top = 203
+      Width = 56
+      Height = 13
       Alignment = taRightJustify
       AutoSize = False
       Caption = 'Line width:'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -14
+      Font.Height = -11
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
     end
     object ColorButton: TSpeedButton
-      Left = 153
-      Top = 245
-      Width = 125
-      Height = 36
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Left = 122
+      Top = 196
+      Width = 100
+      Height = 29
       Caption = 'Line Color...'
       Glyph.Data = {
         F6060000424DF606000000000000360000002800000018000000180000000100
@@ -176,75 +151,59 @@ object EvaluateForm: TEvaluateForm
       OnClick = ColorButtonClick
     end
     object Label4: TLabel
-      Left = 10
-      Top = 109
-      Width = 94
-      Height = 22
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Left = 8
+      Top = 87
+      Width = 75
+      Height = 18
       Alignment = taRightJustify
       AutoSize = False
       Caption = 'dz/dx:'
       Font.Charset = ANSI_CHARSET
       Font.Color = clMaroon
-      Font.Height = -14
+      Font.Height = -11
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object Label5: TLabel
-      Left = 10
-      Top = 136
-      Width = 94
-      Height = 23
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Left = 8
+      Top = 109
+      Width = 75
+      Height = 18
       Alignment = taRightJustify
       AutoSize = False
       Caption = 'dz/dy:'
       Font.Charset = ANSI_CHARSET
       Font.Color = clMaroon
-      Font.Height = -14
+      Font.Height = -11
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
     end
     object Label1: TLabel
-      Left = 214
-      Top = 215
-      Width = 70
-      Height = 16
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Left = 171
+      Top = 172
+      Width = 56
+      Height = 13
       Alignment = taRightJustify
       AutoSize = False
       Caption = 'Arrow size:'
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -14
+      Font.Height = -11
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
     end
     object EditX: TEdit
       Tag = 1
-      Left = 111
-      Top = 21
-      Width = 250
-      Height = 25
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Left = 89
+      Top = 17
+      Width = 200
+      Height = 21
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -14
+      Font.Height = -11
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
@@ -254,17 +213,13 @@ object EvaluateForm: TEvaluateForm
     end
     object EditY: TEdit
       Tag = 2
-      Left = 111
-      Top = 49
-      Width = 250
-      Height = 25
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Left = 89
+      Top = 39
+      Width = 200
+      Height = 21
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -14
+      Font.Height = -11
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
@@ -273,18 +228,14 @@ object EvaluateForm: TEvaluateForm
       OnKeyUp = EditYKeyUp
     end
     object EditZ: TEdit
-      Left = 111
-      Top = 78
-      Width = 250
-      Height = 25
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Left = 89
+      Top = 62
+      Width = 200
+      Height = 21
       Color = clCream
       Font.Charset = ANSI_CHARSET
       Font.Color = clMaroon
-      Font.Height = -14
+      Font.Height = -11
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
@@ -292,19 +243,15 @@ object EvaluateForm: TEvaluateForm
       TabOrder = 2
     end
     object Coordinates: TCheckBox
-      Left = 36
-      Top = 166
-      Width = 182
-      Height = 22
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Left = 29
+      Top = 133
+      Width = 145
+      Height = 17
       Caption = 'Show coordinate lines'
       Checked = True
       Font.Charset = ANSI_CHARSET
       Font.Color = clMaroon
-      Font.Height = -14
+      Font.Height = -11
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
@@ -313,18 +260,14 @@ object EvaluateForm: TEvaluateForm
       OnClick = CoordinatesClick
     end
     object ToGrids: TCheckBox
-      Left = 36
-      Top = 190
-      Width = 238
-      Height = 21
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Left = 29
+      Top = 152
+      Width = 190
+      Height = 17
       Caption = 'Show coordinate lines to grids'
       Font.Charset = ANSI_CHARSET
       Font.Color = clMaroon
-      Font.Height = -14
+      Font.Height = -11
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
@@ -333,17 +276,13 @@ object EvaluateForm: TEvaluateForm
     end
     object EditCoordWidth: TEdit
       Tag = 1
-      Left = 80
-      Top = 250
-      Width = 70
-      Height = 25
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Left = 64
+      Top = 200
+      Width = 56
+      Height = 21
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -14
+      Font.Height = -11
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
@@ -352,19 +291,15 @@ object EvaluateForm: TEvaluateForm
       OnKeyUp = EditCoordWidthKeyUp
     end
     object Editdzdx: TEdit
-      Left = 111
-      Top = 105
-      Width = 250
-      Height = 25
+      Left = 89
+      Top = 84
+      Width = 200
+      Height = 21
       Hint = 'Right click for Popup menu'
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
       Color = clCream
       Font.Charset = ANSI_CHARSET
       Font.Color = clMaroon
-      Font.Height = -14
+      Font.Height = -11
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
@@ -373,19 +308,15 @@ object EvaluateForm: TEvaluateForm
       TabOrder = 3
     end
     object Editdzdy: TEdit
-      Left = 111
-      Top = 133
-      Width = 250
-      Height = 25
+      Left = 89
+      Top = 106
+      Width = 200
+      Height = 21
       Hint = 'Right click for Popup menu'
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
       Color = clCream
       Font.Charset = ANSI_CHARSET
       Font.Color = clMaroon
-      Font.Height = -14
+      Font.Height = -11
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
@@ -394,18 +325,14 @@ object EvaluateForm: TEvaluateForm
       TabOrder = 4
     end
     object dzdx_dzdy: TCheckBox
-      Left = 36
-      Top = 214
-      Width = 169
-      Height = 21
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Left = 29
+      Top = 171
+      Width = 135
+      Height = 17
       Caption = 'Show dz/dx && dz/dy'
       Font.Charset = ANSI_CHARSET
       Font.Color = clMaroon
-      Font.Height = -14
+      Font.Height = -11
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
@@ -414,17 +341,13 @@ object EvaluateForm: TEvaluateForm
     end
     object EditArrow: TEdit
       Tag = 1
-      Left = 289
-      Top = 213
-      Width = 70
-      Height = 25
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Left = 231
+      Top = 170
+      Width = 56
+      Height = 21
       Font.Charset = ANSI_CHARSET
       Font.Color = clBlack
-      Font.Height = -14
+      Font.Height = -11
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
@@ -434,14 +357,10 @@ object EvaluateForm: TEvaluateForm
     end
   end
   object BitBtn1: TBitBtn
-    Left = 290
-    Top = 251
-    Width = 94
-    Height = 37
-    Margins.Left = 4
-    Margins.Top = 4
-    Margins.Right = 4
-    Margins.Bottom = 4
+    Left = 232
+    Top = 201
+    Width = 75
+    Height = 29
     Caption = '&Close'
     DoubleBuffered = False
     Glyph.Data = {

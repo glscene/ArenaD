@@ -19,6 +19,7 @@ uses
   Vcl.Menus,
   Vcl.ComCtrls,
 
+  GLS.OpenGLTokens,
   GLS.Coordinates,
   GLS.VectorTypes,
   GLS.VectorGeometry,
