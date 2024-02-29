@@ -1,0 +1,23 @@
+;
+; SU37 Base
+;
+Model=Models\su37.3ds
+Collision= begin
+        Size=7, 4, 8
+        Type=Mobile
+end
+
+Engine0=MaxOutput=7500,OutputInertia=5000,"Position=-1.1,-0.2,-9"
+Engine1=MaxOutput=7500,OutputInertia=5000,"Position=1.1,-0.2,-9"
+Mass=18500
+HullResistance=100
+LiftPerMSec=0.01
+StallVelocity=20
+StallAngle=0.5
+StallManeuverabilityRatio=1
+MaxRoll=0.02
+MaxPitch=0.01
+MaxYaw=0.007
+AirFrictionMin=-6
+AirFrictionMax=-3
+

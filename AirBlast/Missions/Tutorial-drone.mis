@@ -1,0 +1,65 @@
+;
+; Hoop supplement target drone
+;
+
+spawnpoint: begin
+   Name=SpawnDrone
+   Team=1
+   Position=8000,17000,-1000
+   SpawnEntity0= begin
+      Type=airplane
+      Amount=1
+      MaxSimultaneous=1
+      InitialSpawnDelay=0
+      SpawnDelay=0
+      Data= begin
+         Team=1
+         Name=Target Drone
+         Position=8000,19000,-1000
+         Type=Models\su37.air
+         Velocity=0,200,0
+         Throttle=0.8
+         Controler=TABControlerWaypoints
+         ControlerParams= begin
+            BumpDistance=200
+            WP0=20000,13000,-1000
+            WP1=8000,17000,-1000
+         end
+      end
+   end
+end
+
+event: begin
+   Conditions= begin
+      SpawnPointExhausted SpawnDrone
+   end
+   Actions= begin
+      Enable EventTutorialEnd
+      LogMessage One down! Way to go rookie!
+      Completed
+   end
+end
+
+event: begin
+   Time=1.5
+   Name=EventTutorialEnd
+   Enabled=N
+   Actions= begin
+      PlayVoice Tutorial MissileDone
+      LogMessage So it may not always be that easy!
+      LogMessage Bla bla, of course enemies will defend themselves
+      PlayVoice Tutorial Outtro
+      Enable EventTutorialOver
+      Completed
+   end
+end
+
+event: begin
+   Time=19
+   Enabled=N
+   Name=EventTutorialOver
+   Actions= begin
+      LogMessage You are now allowed to kick butt!
+      GameOver
+   end
+end

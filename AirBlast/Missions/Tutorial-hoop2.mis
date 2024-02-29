@@ -1,0 +1,48 @@
+;
+; Hoop supplement for missile training interlude
+;
+
+hoop: begin
+   Name=Hoop13
+   Position=8000,17000,0
+   Direction=1,0,0
+   HoopSize=200
+   Active=Y
+end
+
+airplane: begin
+   Team=0
+   Name=Instructor 1
+   Position=12000,20000,0
+   Type=Models\su37.air
+   Velocity=0,-200,0
+   Throttle=1
+   Controler=TABControlerAI
+   ControlerParams=begin
+   end
+end
+airplane: begin
+   Team=0
+   Name=Instructor 2
+   Position=14000,17000,0
+   Type=Models\su37-SR.air
+   Velocity=0,-200,0
+   Throttle=1
+   Controler=TABControlerAI
+   ControlerParams=begin
+   end
+end
+airplane: begin
+   Team=1
+   Name=Flight Cadet
+   Position=21000,8000,-1000
+   Type=Models\su37.air
+   Velocity=0,200,0
+   Throttle=0.8
+   Controler=TABControlerWaypoints
+   ControlerParams= begin
+      BumpDistance=200
+      WP0=15000,30000,-1000
+   end
+end
+

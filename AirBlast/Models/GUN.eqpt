@@ -1,0 +1,22 @@
+;
+; Standard Gun with 500 ammo
+;
+
+Type=TABEqptGun
+Group=!Gun
+InitialVelocity=0,0,500
+AmmoMaxCapacity=500
+MaxRange=1500
+OptimalRange=350
+TimeToLive=5
+PrimaryDamage=5
+PrimaryCoolDown=0.75
+PrimaryConsumption=5
+PrimarySalvoCount=2
+PrimarySalvoInterval=0.2
+AlternateDamage=8
+AlternateCoolDown=0.85
+AlternateConsumption=15
+AlternateSalvoCount=4
+AlternateSalvoInterval=0.2
+TargetingAssist=0

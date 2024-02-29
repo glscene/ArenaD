@@ -1,0 +1,57 @@
+;
+; SU37 Short-Range Missiles
+;
+HullResistance=300
+#include Models\su37-base.air
+
+Equipment0= begin
+   Type=TABEqptInstruments
+end
+Equipment1= begin
+   Position=1,-0.05,6
+   AmmoMaxCapacity=1000
+   #include Models\GUN.eqpt
+end
+Equipment2= begin
+   Position=-1,-0.05,6
+   AmmoMaxCapacity=1000
+   #include Models\GUN.eqpt
+end
+Equipment3= begin
+   Position=3.3,0,-2.5
+   #include Models\AIM9.eqpt
+end
+Equipment4= begin
+   Position=-3.3,0,-2.5
+   #include Models\AIM9.eqpt
+end
+Equipment5= begin
+   Position=4,0,-2.5
+   #include Models\AIM9.eqpt
+end
+Equipment6= begin
+   Position=-4,0,-2.5
+   #include Models\AIM9.eqpt
+end
+Equipment7= begin
+   Position=7.5,0.2,-4
+   #include Models\AIM9.eqpt
+end
+Equipment8= begin
+   Position=-7.5,0.2,-4
+   #include Models\AIM9.eqpt
+end
+Equipment9= begin
+   Type=TABEqptDecoyLauncher
+   MaxCapacity=30
+   Efficiency=0.5
+   CoolDown=0.3
+   DecoyLifeTime=10
+end
+Equipment10= begin
+   Type=TABEqptDamageControl
+   MaxCapacity=2
+   Efficiency=20
+   CoolDown=1
+end
+

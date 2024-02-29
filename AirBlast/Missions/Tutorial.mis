@@ -1,0 +1,289 @@
+;
+; Test Mission
+;
+
+team: begin
+   Name=Player
+end
+team: begin
+   Name=Computer
+end
+
+airplane: begin
+   Team=0
+   Name=Player
+   Position=-18000,5400,0
+   Velocity=80,0,-20
+   Type=Models\su37.air
+   Throttle=0.3
+   Controler=UI
+   DestroyActions= begin
+      Enable EventGameOver
+   end
+end
+event: begin
+   Time=6
+   Name=EventGameOver
+   Enabled=N
+   Actions=GameOver
+end
+
+;
+; Tutorial Intro
+;
+
+event: begin
+   Actions= begin
+      Camera 0 begin
+         Mobile=Player
+         Mode=Vanity Camera
+         ChaseOffset=0,500,-500
+         VanityOffset=0,0,0
+         Tension=0
+      end
+      Camera 0 begin
+         Mobile=Player
+         Mode=Cockpit
+      end
+      Deplete Player
+      DisableUI
+      Completed
+   end
+end
+
+event: begin
+   Time=0.2
+   Actions= begin
+      PlayVoice Tutorial Intro
+      LogMessage I will be your instructor for this tutorial
+      LogMessage Welcome to basic training qualifications
+      Camera 0 begin
+         Mode=Vanity Camera
+         ChaseOffset=0,5,-20
+         Tension=0.99
+      end
+      Completed
+   end
+end
+
+event: begin
+   Time=4
+   Actions= begin
+      PlayVoice Tutorial ControlsReminder
+      LogMessage You will find the option in the Options dialog
+      LogMessage If you did not activate your joystick, do so now
+      Completed
+   end
+end
+
+event: begin
+   Time=8
+   Actions= begin
+      Camera 0 begin
+         ChaseOffset=-20,5,0
+         Tension=0
+      end
+      Completed
+   end
+end
+
+event: begin
+   Time=15
+   Actions= begin
+      PlayVoice Tutorial HoopsAnnounce
+      LogMessage First we'll test your flight capabilities
+      Camera 0 begin
+         Mobile=Player
+         Mode=Vanity Camera
+         ChaseOffset=20,5,0
+         Tension=0
+      end
+      Completed
+   end
+end
+
+;
+; Create the hoops
+;
+event: begin
+   Time=20
+   Actions= begin
+      Load Missions\Tutorial-hoops.mis
+      PlayVoice Tutorial HoopsExplain
+      PlayVoice Tutorial CallMeBack
+      LogMessage This will light up the next hoop in turn
+      LogMessage Fly through the highlighted hoop
+      Camera 0 begin
+         ChaseOffset=0,4,-40
+         Mobile=Player
+         Mode=Cockpit
+      end
+      EnableUI
+      Completed
+   end
+end
+
+event: begin
+   Conditions= begin
+      MobileAtWaypoint begin
+         Mobile=Player
+         BumpRadius=200
+         Position=-8708.63,5645.19,-519.41
+      end
+   end
+   Actions= begin
+      PlayVoice Tutorial Circus Polka
+      EnableUI
+      Completed
+   end
+end
+
+;
+; Hoops done begin missile training
+;
+
+event: begin
+   Conditions= begin
+      MobileAtWaypoint begin
+         Mobile=Player
+         BumpRadius=200
+         Position=1370.32,17036.45,-222.04
+      end
+   end
+   Actions= begin
+      PlayVoice Tutorial HoopsDone
+      LogMessage We will now proceed to missile training
+      LogMessage Basic flight training passed
+      Enable EventNowProceedToRing
+      Completed
+   end
+end
+
+event: begin
+   Time=5
+   Name=EventNowProceedToRing
+   Enabled=N
+   Actions= begin
+      PlayVoice Tutorial Wait our turn
+      LogMessage We'll have to wait a bit
+      LogMessage Another cadet is passing qualifications
+      Load Missions\Tutorial-hoop2.mis
+      Enable EventFox1
+      Enable EventFox2
+      Enable EventOhNo
+      Enable EventInstructorComments
+      Enable EventCrashCam
+      Completed
+   end
+end
+
+event: begin
+   Time=9
+   Name=EventFox1
+   Enabled=N
+   Actions= begin
+      Camera 0 begin
+         Mode=Free Target
+         Mobile=Flight Cadet
+         FreePosition=19000,13250,-1100
+         Tension=0
+      end
+      PlayVoice Tutorial Fox 1
+      LogMessage Instructor 1 - Fox 1
+      Completed
+   end
+end
+event: begin
+   Time=11
+   Name=EventFox2
+   Enabled=N
+   Actions= begin
+      PlayVoice Tutorial Fox 2
+      LogMessage Instructor 2 - Fox 2
+      Completed
+   end
+end
+event: begin
+   Time=14
+   Name=EventOhNo
+   Enabled=N
+   Actions= begin
+      PlayVoice Tutorial Oh No
+      LogMessage Flight Cadet - Oh No!
+      Completed
+   end
+end
+event: begin
+   Time=18.7
+   Name=EventCrashCam
+   Enabled=N
+   Actions= begin
+      Camera 0 begin
+         FreeDirection=1.2,1,-1
+         Tension=0.99
+      end
+      Completed
+   end
+end
+event: begin
+   Time=20
+   Name=EventInstructorComments
+   Enabled=N
+   Actions= begin
+      PlayVoice Tutorial Still need training
+      LogMessage Instructor 1 - Looks like you still need training
+      Enable EventInstructorComments2
+      Completed
+   end
+end
+event: begin
+   Time=3
+   Name=EventInstructorComments2
+   Enabled=N
+   Actions= begin
+      Camera 0 begin
+         Mode=Cockpit
+         Mobile=Player
+      end
+      PlayVoice Tutorial Indeed
+      LogMessage (And quite noobish I might add)
+      LogMessage Instructor 2 - Indeed, that most apalling
+      Enable EventBeginMissileTraining
+      Completed
+   end
+end
+
+;
+; Begin missile training
+;
+
+event: begin
+   Time=7
+   Name=EventBeginMissileTraining
+   Enabled=N
+   Actions= begin
+      PlayVoice Tutorial MissileExplain
+      LogMessage (selects the nearest enemy)
+      LogMessage First select the drone with the 'R' key
+      LogMessage You were given missiles, use them to shoot the drone
+      Remove Instructor 1
+      Remove Instructor 2
+      Load Missions\Tutorial-drone.mis
+      Replenish Player
+      Enable EventMissileExplainText
+      Completed
+   end
+end
+
+event: begin
+   Time=4
+   Name=EventMissileExplainText
+   Enabled=N
+   Actions= begin
+      LogMessage When you get the lock, fir your missiles!
+      LogMessage You should hear the missile lock buzz
+      LogMessage Then aim for the drone.
+      Completed
+   end
+end
+

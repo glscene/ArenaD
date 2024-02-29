@@ -1,0 +1,14 @@
+Type=TABEqptGuidedMissile
+Group=AIM9
+Model=Models\aim9.3ds
+AmmoType=Models\aim9.air
+InitialVelocity=0,0,1
+MaxRange=6000
+OptimalRange=2000
+LockAngle=0.12
+LockDelay=2
+Controler=TABControlerMissileTracker
+ControlerParams= begin
+        ProximityFuse=70
+end
+VoiceNotification=Fox 2

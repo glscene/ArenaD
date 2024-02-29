@@ -1,0 +1,401 @@
+;
+; Endurance Mission
+;
+
+team: begin
+   Name=Player
+end
+team: begin
+   Name=Computer
+end
+
+airplane: begin
+   Position=10000,-10500,-1500
+   Name=Player
+   Team=0
+   Type=Models\su37-Endurance.air
+   Velocity=210,-105,-55
+   Throttle=0.9
+   Controler=UI
+   DestroyActions= begin
+      Enable EventGameOver
+   end
+end
+event: begin
+   Time=5
+   Name=EventGameOver
+   Enabled=N
+   Actions=GameOver
+end
+
+airplane: begin
+   Name=Wingman
+   Leader=Player
+   Team=0
+   Type=Models\su37-Endurance.air
+   Position=9900,-10500,-1500
+   Velocity=210,-105,-55
+   Throttle=0.9
+   Controler=TABControlerAI
+   ControlerParams= begin
+      AILevel=Veteran
+      Order=CoverLeader
+   end
+end
+
+;
+; Short opening sequence
+;
+
+event: begin
+   Actions= begin
+      PlayMusic Music\Under_Attack_I_Calpomatt_Fade.mp3
+      Camera 0 begin
+         Mobile=Player
+         Mode=Vanity Camera
+         ChaseOffset=2500,2500,2500
+         VanityOffset=0,0,0
+         Tension=0
+      end
+      DisableUI
+      Completed
+   end
+end
+
+event: begin
+   Time=0.1
+   Actions= begin
+      Camera 0 begin
+         Mode=Vanity Camera
+         ChaseOffset=0,200,500
+         Tension=0.99
+      end
+      Completed
+   end
+end
+
+event: begin
+   Time=3.5
+   Actions= begin
+      Camera 0 begin
+         Mode=Vanity Camera
+         ChaseOffset=-110,20,-110
+         Tension=0.99
+      end
+      Play2DSound Sounds\ProceedWithCaution.mp3
+      LogMessage Proceed with caution.
+      LogMessage Desert Patrol, multiple hostiles reported.
+      Completed
+   end
+end
+
+event: begin
+   Time=10
+   Actions= begin
+      Camera 0 begin
+         ChaseOffset=0,4,-40
+         Mode=Cockpit
+      end
+      EnableUI
+      PlayVoice Combat_Charles Roger
+      LogMessage Roger!
+      Completed
+   end
+end
+
+;
+; 1st hoop, 4 gunners from the right
+;
+hoop: begin
+   Name=HoopA
+   Position=18718.51,-14915.59,-1699.70
+   Direction=0,0,0
+   HoopSize=200
+   NextHoop=HoopB
+   Active=Y
+   BumpActions= begin
+      Replenish EncounterA
+      Enable EncounterA
+      Replenish Player
+      Replenish Wingman
+      LogMessage Aircraft replenished
+      PlayVoice GameMenu Aircraft replenished
+      Enable EncounterAAnnounce
+   end
+end
+event: begin
+   Time=3
+   Name=EncounterAAnnounce
+   Enabled=N
+   Actions= begin
+      PlayVoice Combat_Charles Two Bandits
+      PlayVoice Combat_Charles 3
+      PlayVoice Combat_Charles Low
+      Completed
+   end
+end
+spawnpoint: begin
+   Name=EncounterA
+   Team=1
+   Enabled=N
+   Position=17525.87,-22669.50,-1060.29
+   SpawnEntity0= begin
+      Type=airplane
+      Amount=4
+      MaxSimultaneous=2
+      InitialSpawnDelay=0
+      SpawnDelay=3
+      Data= begin
+         Name=Computer
+         Team=1
+         Type=Models\su37-guns.air
+         Velocity=0,200,0
+         Throttle=1
+         KillScore=1
+         Controler=TABControlerAI
+         ControlerParams=AILevel=Noob
+      end
+   end
+end
+
+;
+; 2nd hoop, 3 bandits from the right
+;
+hoop: begin
+   Name=HoopB
+   Position=27903.01,-19245.13,-1778.59
+   Direction=0,0,0
+   HoopSize=200
+   NextHoop=HoopC
+   Active=N
+   BumpActions= begin
+      Replenish EncounterB
+      Enable EncounterB
+      Repair Player
+      Repair Wingman
+      LogMessage Aircraft repaired
+      PlayVoice GameMenu Aircraft repaired
+   end
+end
+spawnpoint: begin
+   Name=EncounterB
+   Team=1
+   Enabled=N
+   Position=22175.32,-26639.36,-488.07
+   SpawnEntity0= begin
+      Type=airplane
+      Amount=3
+      MaxSimultaneous=2
+      InitialSpawnDelay=0
+      SpawnDelay=3
+      Data= begin
+         Name=Computer
+         Team=1
+         Type=Models\su37.air
+         Velocity=100,100,0
+         Throttle=1
+         KillScore=1
+         Controler=TABControlerAI
+         ControlerParams=AILevel=Harmless
+      end
+   end
+end
+
+;
+; 3rd hoop, 3 gunners from the plain
+;
+hoop: begin
+   Name=HoopC
+   Position=40574.21,-9481.50,-1537.56
+   Direction=0,0,0
+   HoopSize=200
+   NextHoop=HoopD
+   Active=N
+   BumpActions= begin
+      Replenish EncounterC
+      Enable EncounterC
+      Replenish Player
+      Replenish Wingman
+      LogMessage Aircraft replenished
+      PlayVoice GameMenu Aircraft replenished
+   end
+end
+spawnpoint: begin
+   Name=EncounterC
+   Team=1
+   Enabled=N
+   Position=65945.70,-10820.37,-1478.81
+   SpawnEntity0= begin
+      Type=airplane
+      Amount=3
+      MaxSimultaneous=3
+      InitialSpawnDelay=0
+      SpawnDelay=3
+      Data= begin
+         Name=Computer
+         Team=1
+         Type=Models\su37-guns.air
+         Velocity=-200,0,0
+         Throttle=1
+         KillScore=1
+         Controler=TABControlerAI
+         ControlerParams=AILevel=Soldier
+      end
+   end
+end
+
+;
+; 4th hoop, 2 SR on the other side
+;
+hoop: begin
+   Name=HoopD
+   Position=39107.81,5325.59,1781.35
+   Direction=0,0,0
+   HoopSize=200
+   NextHoop=HoopE
+   Active=N
+   BumpActions= begin
+      Replenish EncounterD
+      Enable EncounterD
+      Repair Player
+      Repair Wingman
+      LogMessage Aircraft repaired
+      PlayVoice GameMenu Aircraft repaired
+   end
+end
+spawnpoint: begin
+   Name=EncounterD
+   Team=1
+   Enabled=N
+   Position=36281.09,14483.48,-1675.45
+   SpawnEntity0= begin
+      Type=airplane
+      Amount=2
+      MaxSimultaneous=2
+      InitialSpawnDelay=0
+      SpawnDelay=3
+      Data= begin
+         Name=Computer
+         Team=1
+         Type=Models\su37-SR.air
+         Velocity=0,-200,0
+         Throttle=1
+         KillScore=1
+         Controler=TABControlerAI
+         ControlerParams=AILevel=Noob
+      end
+   end
+end
+
+;
+; 5th hoop, 4 gunners from over the hill in the sun
+;
+hoop: begin
+   Name=HoopE
+   Position=32000,22000,-1700
+   Direction=0,0,0
+   HoopSize=200
+   NextHoop=HoopF
+   Active=N
+   BumpActions= begin
+      Replenish EncounterE
+      Enable EncounterE
+      Enable EncounterEAnnounce
+      Replenish Player
+      Replenish Wingman
+      LogMessage Aircraft replenished
+      PlayVoice GameMenu Aircraft replenished
+   end
+end
+event: begin
+   Time=3
+   Name=EncounterEAnnounce
+   Enabled=N
+   Actions= begin
+      PlayVoice Combat_Charles Multiple Bandits
+      PlayVoice Combat_Charles High
+      Completed
+   end
+end
+spawnpoint: begin
+   Name=EncounterE
+   Team=1
+   Enabled=N
+   Position=28747.84,33286.09,2764.08
+   SpawnEntity0= begin
+      Type=airplane
+      Amount=6
+      MaxSimultaneous=4
+      InitialSpawnDelay=0
+      SpawnDelay=4
+      Data= begin
+         Name=Computer
+         Team=1
+         Type=Models\su37-guns.air
+         Velocity=0,-200,0
+         Throttle=1
+         KillScore=1
+         Controler=TABControlerAI
+         ControlerParams=AILevel=Recruit
+      end
+   end
+end
+
+;
+; 6th hoop, 2x 2 elite Bandits from left rear
+;
+hoop: begin
+   Name=HoopF
+   Position=20099.56,21935.08,-1506.13
+   Direction=0,0,0
+   HoopSize=200
+   NextHoop=HoopG
+   Active=N
+   BumpActions= begin
+      Replenish EncounterF
+      Enable EncounterF
+      Repair Player
+      Repair Wingman
+      LogMessage Aircraft repaired
+      PlayVoice GameMenu Aircraft repaired
+   end
+end
+spawnpoint: begin
+   Name=EncounterF
+   Team=1
+   Enabled=N
+   Position=22303.89,14173.79,-1655.10
+   SpawnEntity0= begin
+      Type=airplane
+      Amount=4
+      MaxSimultaneous=2
+      InitialSpawnDelay=0
+      SpawnDelay=120
+      Data= begin
+         Name=Computer
+         Team=1
+         Type=models/Models\su37.air
+         Velocity=0,-200,0
+         Throttle=1
+         KillScore=1
+         Controler=TABControlerAI
+         ControlerParams=AILevel=Ace
+      end
+   end
+end
+
+;
+; 7th hoop, Patrol completed!
+;
+hoop: begin
+   Name=HoopG
+   Position=20230.79,5910.15,-538.46
+   Direction=0,0,0
+   HoopSize=200
+   NextHoop=HoopA
+   Active=N
+   BumpActions= begin
+      LogMessage Patrol Loop Completed!
+   end
+end
+

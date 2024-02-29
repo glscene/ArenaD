@@ -1,0 +1,14 @@
+Type=TABEqptGuidedMissile
+Group=AARAM
+Model=Models\aaram.3ds
+AmmoType=Models\aaram.air
+InitialVelocity=0,-2,-1
+MaxRange=11000
+OptimalRange=5000
+LockAngle=0.25
+LockDelay=3
+Controler=TABControlerMissileTracker
+ControlerParams= begin
+        ProximityFuse=80
+end
+VoiceNotification=Fox 1

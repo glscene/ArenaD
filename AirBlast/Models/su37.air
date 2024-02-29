@@ -1,0 +1,42 @@
+;
+; SU37 Std config
+;
+#include Models\su37-base.air
+
+Equipment0= begin
+   Type=TABEqptInstruments
+end
+Equipment1= begin
+   Position=0,-0.05,6
+   #include Models\GUN.eqpt
+end
+Equipment2= begin
+   Position=4,-0.25,-2.5
+   #include Models\AARAM.eqpt
+end
+Equipment3= begin
+   Position=-4,-0.25,-2.5
+   #include Models\AARAM.eqpt
+end
+Equipment4= begin
+   Position=7.5,0.2,-4
+   #include Models\AIM9.eqpt
+end
+Equipment5= begin
+   Position=-7.5,0.2,-4
+   #include Models\AIM9.eqpt
+end
+Equipment6= begin
+   Type=TABEqptDecoyLauncher
+   MaxCapacity=15
+   Efficiency=0.5
+   CoolDown=0.5
+   DecoyLifeTime=10
+end
+Equipment7= begin
+   Type=TABEqptDamageControl
+   MaxCapacity=2
+   Efficiency=20
+   CoolDown=1
+end
+

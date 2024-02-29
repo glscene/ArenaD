@@ -1,0 +1,54 @@
+Credits for Resources used in the AirBlast Project
+
+Note that these are credits as far as I knew or remember them,
+it's entirely possible that some credits here were misattributed
+by me, or were mireported to me. As you'll see, many aren't very
+accurate.
+
+Eric Grange & http://glscene.org
+GLS Team https://github.com/glscene
+
+*** Models:
+
+- SU37 model is an adaptation of the Facets free model
+	http://www.facets3dmodels.com/
+- AARAM, AIM9, Gate and Spanner models were made by me, you can reuse 
+  them freely
+
+*** Musics:
+
+- "Circus Polka", by Igor Stravinsky, interpreted by Myron Floren
+	http://www.arizona-accordion-club.com/download.htm
+- All other musics are from CalpoMatt, downloaded from FlashKit
+	http://www.calpomatt.lavista.org/
+
+*** Sounds:
+
+- This is essentially unknown territory, as they came for a personnally
+  amassed library of what were supposedly free samples. Some were altered
+  by me, all were at least resampled once.
+  Most prominent site I remember downloading samples from is FlashKit
+	http://www.flashkit.com/index.shtml
+
+*** Terrain:
+
+- Elevation and texture data were generated from TerraGen some time ago
+	http://www.planetside.co.uk/terragen/
+- Detail textures are adaptation of free textures from
+	http://3dtextures.fr.st/
+  (for Detail1.jpg, I'm sure of it, not sure for the other texture)
+
+*** Textures:
+
+- Text textures were made by CoolText's generator
+	http://www.cooltext.com/
+- GLScene logo was made with the help of an old Xara3D version
+	http://www.xara.com/products/xara3d/
+- Other textures were made by me, starting from rough materials
+  of unknown origin found via Google
+
+*** Voices:
+
+- All voice samples were made with AT&T Natural Voices
+	http://www.naturalvoices.att.com/
+  I'm not really sure you can use these commercially or anything...

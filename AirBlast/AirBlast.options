@@ -1,0 +1,15 @@
+Difficulty=2
+Speed=2
+VideoMode=1920x1080 32bit
+FSAA=1
+TerrainQuality=2
+Particles=2
+MasterVolume=100
+EnginesVolume=100
+VoiceVolume=100
+KeyboardLayout=Standard
+Joystick=N
+JoystickDeadZone=10
+VSync=Y
+MusicVolume=100
+TutorialPassed=Y

@@ -1,0 +1,30 @@
+;
+; SU37 Guns-only config
+;
+#include Models\su37-base.air
+
+Equipment0= begin
+   Type=TABEqptInstruments
+end
+Equipment1= begin
+   Position=1,-0.05,6
+   #include Models\GUN.eqpt
+end
+Equipment2= begin
+   Position=-1,-0.05,6
+   #include Models\GUN.eqpt
+end
+Equipment3= begin
+   Type=TABEqptDecoyLauncher
+   MaxCapacity=20
+   Efficiency=0.5
+   CoolDown=0.5
+   DecoyLifeTime=10
+end
+Equipment4= begin
+   Type=TABEqptDamageControl
+   MaxCapacity=3
+   Efficiency=20
+   CoolDown=1
+end
+

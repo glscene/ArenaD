@@ -1,0 +1,364 @@
+;
+; 1vs1 Mission FurBall mode (no missiles)
+;
+
+countdown: 210
+
+team: begin
+   Name=Player
+end
+team: begin
+   Name=Computer
+end
+
+spawnpoint: begin
+   Name=SpawnPlayer
+   Team=0
+   Position=6000,9500,-1500
+   SpawnEntity0= begin
+      Type=airplane
+      Amount=99
+      MaxSimultaneous=1
+      InitialSpawnDelay=0
+      SpawnDelay=5
+      Data= begin
+         Name=Player
+         Team=0
+         Type=Models\su37-guns.air
+         Velocity=0,-200,-15
+         Throttle=1
+         KillScore=1
+         Controler=UI
+         ControlerParams=Active=N
+      end
+   end
+end
+
+;
+; Victory ratings
+;
+ratings: begin
+   -99999,0=You were rather pitiful.
+   1,2000=At least you managed to win.
+   2001,5000=Nice, but you need more training.
+   5001,8000=Good, now that's a pilot!
+   8001,10000=Congrats! You sure know how to fight!
+   10001,15000=You're a real ace!
+   16000,99999=You're the Ace of Aces!
+end
+
+;
+; Replenish Bonus
+;
+
+bonus: begin
+   Position=6000,0,-2000
+   Collision= begin
+      Type=Immaterial
+      Size=250, 250, 250
+   end
+   RespawnDelay=87
+   RespawnDispersion=5000
+   RespawnActions= begin
+      PlayVoice GameMenu Replenish available
+      LogMessage Replenish available
+   end
+   BumpActions= begin
+      PlaySound Bonus_Collect
+      PlayVoice GameMenu Aircraft replenished
+      LogMessage Aircraft replenished
+      Replenish %CurrentAirplane%
+   end
+end
+
+;
+; Repair Bonus
+;
+
+bonus: begin
+   Position=6000,0,-2000
+   Collision= begin
+      Type=Immaterial
+      Size=250, 250, 250
+   end
+   ModelName=Models\spanner.3ds
+   RespawnDelay=153
+   RespawnDispersion=5000
+   RespawnActions= begin
+      PlayVoice GameMenu Repair kit available
+      LogMessage Repair kit available
+   end
+   BumpActions= begin
+      PlaySound Bonus_Collect
+      PlayVoice GameMenu Aircraft repaired
+      LogMessage Aircraft Repaired
+      Repair %CurrentAirplane%
+   end
+end
+
+;
+; Short opening sequence
+;
+
+event: begin
+   Actions= begin
+      PlayMusic Music\Under_Attack_I_Calpomatt_Fade.mp3
+      Camera 0 begin
+         Mobile=Player
+         Mode=Vanity Camera
+         ChaseOffset=0,2500,-3500
+         VanityOffset=0,0,0
+         Tension=0
+      end
+      DisableUI
+      Completed
+   end
+end
+
+event: begin
+   Time=0.1
+   Actions= begin
+      Camera 0 begin
+         Mode=Vanity Camera
+         ChaseOffset=0,5,-20
+         Tension=0.99
+      end
+      Completed
+   end
+end
+
+event: begin
+   Time=8
+   Actions= begin
+      Camera 0 begin
+         Mode=Cockpit
+      end
+      EnableUI
+      Completed
+   end
+end
+
+;
+; Begin with a harmless opponent
+;
+
+spawnpoint: begin
+   Name=SpawnComputerHarmless
+   Team=1
+   Position=6000,-9500,-1500
+   SpawnEntity0= begin
+      Type=airplane
+      Amount=2
+      MaxSimultaneous=1
+      InitialSpawnDelay=0
+      SpawnDelay=3
+      Data= begin
+         Name=Computer
+         Team=1
+         Type=Models\su37-guns.air
+         Velocity=0,200,0
+         Throttle=1
+         KillScore=1
+         Controler=TABControlerAI
+         ControlerParams=AILevel=Harmless
+      end
+   end
+end
+
+event: begin
+   Conditions= begin
+      SpawnPointExhausted SpawnComputerHarmless
+   end
+   Actions= begin
+      Enable SpawnComputerNoob
+      LogMessage Opponent AI Level increased
+      DelayCountdown 30
+      PlayVoice GameMenu 30 seconds granted
+      Completed
+   end
+end
+
+spawnpoint: begin
+   Name=SpawnComputerNoob
+   Team=1
+   Position=6000,-9500,-1500
+   Enabled=N
+   SpawnEntity0= begin
+      Type=airplane
+      Amount=2
+      MaxSimultaneous=1
+      InitialSpawnDelay=0
+      SpawnDelay=3
+      Data= begin
+         Name=Computer
+         Team=1
+         Type=Models\su37-guns.air
+         Velocity=0,200,0
+         Throttle=1
+         KillScore=1
+         Controler=TABControlerAI
+         ControlerParams=AILevel=Noob
+      end
+   end
+end
+
+event: begin
+   Conditions= begin
+      SpawnPointExhausted SpawnComputerNoob
+   end
+   Actions= begin
+      Enable SpawnComputerRecruit
+      LogMessage Opponent AI Level increased again!
+      DelayCountdown 60
+      PlayVoice GameMenu 60 seconds granted
+      Completed
+   end
+end
+
+spawnpoint: begin
+   Name=SpawnComputerRecruit
+   Team=1
+   Position=6000,-9500,-1500
+   Enabled=N
+   SpawnEntity0= begin
+      Type=airplane
+      Amount=2
+      MaxSimultaneous=1
+      InitialSpawnDelay=0
+      SpawnDelay=3
+      Data= begin
+         Name=Computer
+         Team=1
+         Type=Models\su37-guns.air
+         Velocity=0,200,0
+         Throttle=1
+         KillScore=1
+         Controler=TABControlerAI
+         ControlerParams=AILevel=Recruit
+      end
+   end
+end
+
+event: begin
+   Conditions= begin
+      SpawnPointExhausted SpawnComputerRecruit
+   end
+   Actions= begin
+      Enable SpawnComputerSoldier
+      LogMessage Opponent AI now knows how to fight!
+      DelayCountdown 90
+      PlayVoice GameMenu 90 seconds granted
+      Completed
+   end
+end
+
+spawnpoint: begin
+   Name=SpawnComputerSoldier
+   Team=1
+   Position=6000,-9500,-1500
+   Enabled=N
+   SpawnEntity0= begin
+      Type=airplane
+      Amount=2
+      MaxSimultaneous=1
+      InitialSpawnDelay=0
+      SpawnDelay=3
+      Data= begin
+         Name=Computer
+         Team=1
+         Type=Models\su37-guns.air
+         Velocity=0,200,0
+         Throttle=1
+         KillScore=1
+         Controler=TABControlerAI
+         ControlerParams=AILevel=Soldier
+      end
+   end
+end
+
+event: begin
+   Conditions= begin
+      SpawnPointExhausted SpawnComputerSoldier
+   end
+   Actions= begin
+      Enable SpawnComputerVeteran
+      LogMessage Looks like I underestimated you.
+      DelayCountdown 90
+      PlayVoice GameMenu 90 seconds granted
+      Completed
+   end
+end
+
+spawnpoint: begin
+   Name=SpawnComputerVeteran
+   Team=1
+   Position=6000,-9500,-1500
+   Enabled=N
+   SpawnEntity0= begin
+      Type=airplane
+      Amount=2
+      MaxSimultaneous=1
+      InitialSpawnDelay=0
+      SpawnDelay=3
+      Data= begin
+         Name=Computer
+         Team=1
+         Type=Models\su37-guns.air
+         Velocity=0,200,0
+         Throttle=1
+         KillScore=1
+         Controler=TABControlerAI
+         ControlerParams=AILevel=Veteran
+      end
+   end
+end
+
+event: begin
+   Conditions= begin
+      SpawnPointExhausted SpawnComputerVeteran
+   end
+   Actions= begin
+      Enable SpawnComputerAce
+      LogMessage So, you're a tough guy eh?
+      DelayCountdown 90
+      PlayVoice GameMenu 90 seconds granted
+      Completed
+   end
+end
+
+spawnpoint: begin
+   Name=SpawnComputerAce
+   Team=1
+   Position=6000,-9500,-1500
+   Enabled=N
+   SpawnEntity0= begin
+      Type=airplane
+      Amount=1
+      MaxSimultaneous=1
+      InitialSpawnDelay=0
+      SpawnDelay=3
+      Data= begin
+         Name=Computer
+         Team=1
+         Type=Models\su37-guns.air
+         Velocity=0,200,0
+         Throttle=1
+         KillScore=1
+         Controler=TABControlerAI
+         ControlerParams=AILevel=Ace
+      end
+   end
+end
+
+event: begin
+   Conditions= begin
+      SpawnPointExhausted SpawnComputerAce
+   end
+   Actions= begin
+      Replenish SpawnComputerAce
+      LogMessage You want more? I got more!
+      DelayCountdown 60
+      PlayVoice GameMenu 60 seconds granted
+   end
+end
+

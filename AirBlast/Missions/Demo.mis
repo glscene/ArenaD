@@ -1,0 +1,243 @@
+;
+; Demo Mission, runs in background of main menu
+;
+
+team: begin
+   Name=Player
+end
+
+airplane: begin
+   Name=Player
+   Type=Models\su37.air
+   Team=0
+   Position=5000,-8500,-2000
+   Velocity=20,-220,0
+   Throttle=0.9
+   KillScore=1
+   Controler=TABControlerWaypoints
+   ControlerParams= begin
+      BumpDistance=200
+      WP0=5431.29,-13513.39,-2204.17
+      WP1=6364.45,-17407.95,-2191.16
+      WP2=8346.66,-21288.99,-2147.42
+      WP3=9867.06,-23958.50,-1527.18
+      WP4=10738.59,-25150.94,-1412.50
+      WP5=13063.81,-26584.78,-1917.50
+      WP6=15281.94,-27950.91,-2142.78
+      WP7=18729.00,-28933.38,-2069.95
+      WP8=21599.08,-27572.09,-2024.98
+      WP9=22259.61,-26906.11,-1872.13
+      WP10=23505.42,-25839.85,-1762.00
+      WP11=24317.10,-23893.45,-2212.57
+      WP12=24042.20,-20342.06,-2223.48
+      WP13=23582.28,-14569.68,-2239.91
+      WP14=23220.70,-9489.76,-2187.02
+      WP15=23422.85,-3766.51,-2032.01
+      WP16=22899.47,3851.68,-2074.34
+      WP17=21958.85,12126.94,-2198.71
+      WP18=21932.98,15794.41,-1412.77
+      WP19=23219.14,18963.63,401.56
+      WP20=24843.52,20267.75,1571.91
+      WP21=25881.83,20018.73,2065.68
+      WP22=26352.53,19137.20,2281.52
+      WP23=26233.91,18033.28,2480.11
+      WP24=25498.97,17433.16,2417.74
+      WP25=24254.65,16123.45,1518.40
+      WP26=22181.54,14752.15,-1041.49
+      WP27=19786.08,13809.25,-1850.91
+      WP28=16233.26,12368.51,-2135.47
+      WP29=14336.49,11341.21,-2045.76
+      WP30=12709.58,9734.05,-1268.29
+      WP31=11938.64,8846.65,-1100.34
+      WP32=11054.41,7387.11,-1582.45
+      WP33=9797.59,3500.30,-2095.07
+      WP34=7788.10,-4398.47,-2153.03
+   end
+end
+
+;
+; Initial camera setup and zoom in
+;
+event: begin
+   Time=0
+   Actions= begin
+      Camera 0 begin
+         Mobile=Player
+         Mode=Vanity Camera
+         ChaseOffset=-10000,3500,15000
+         VanityOffset=0,-1500,0
+         Tension=0
+      end
+      Completed
+   end
+end
+
+event: begin
+   Time=0.5
+   Actions= begin
+      PlayMusicLoop Music\Fear_Nothing_Calpomatt.wav
+      Completed
+   end
+end
+
+event: begin
+   Time=2
+   Actions= begin
+      Camera 0 begin
+         ChaseOffset=6000,2500,20000
+         VanityOffset=7000,-500,0
+         Tension=0.99
+      end
+      Completed
+   end
+end
+
+event: begin
+   Time=3.5
+   Actions= begin
+      Camera 0 begin
+         ChaseOffset=0,10,50
+         VanityOffset=25,0,0
+      end
+      Completed
+   end
+end
+
+;
+; Triggers along the path to vary camera angle
+;
+
+; look at mountain
+event: begin
+   Conditions= begin
+      MobileAtWaypoint begin
+         Mobile=Player
+         BumpRadius=1000
+         Position=6364.45,-17407.95,-2191.16
+      end
+   end
+   Actions= begin
+      Camera 0 begin
+         ChaseOffset=-50,-15,-50
+         VanityOffset=0,20,80
+      end
+   end
+end
+
+; look at small pass
+event: begin
+   Conditions= begin
+      MobileAtWaypoint begin
+         Mobile=Player
+         BumpRadius=1000
+         Position=8346.66,-21288.99,-2147.42
+      end
+   end
+   Actions= begin
+      Camera 0 begin
+         ChaseOffset=-15,15,-70
+         VanityOffset=-30,0,0
+      end
+   end
+end
+
+; look back
+event: begin
+   Conditions= begin
+      MobileAtWaypoint begin
+         Mobile=Player
+         BumpRadius=1000
+         Position=24317.10,-23893.45,-2212.57
+      end
+   end
+   Actions= begin
+      Camera 0 begin
+         ChaseOffset=15,15,70
+         VanityOffset=30,0,0
+      end
+   end
+end
+
+; look north on the plain
+event: begin
+   Conditions= begin
+      MobileAtWaypoint begin
+         Mobile=Player
+         BumpRadius=1000
+         Position=24042.20,-20342.06,-2223.48
+      end
+   end
+   Actions= begin
+      Camera 0 begin
+         ChaseOffset=70,15,0
+         VanityOffset=0,0,-30
+      end
+   end
+end
+
+; WP14 - look at the mesa we'll circle around
+event: begin
+   Conditions= begin
+      MobileAtWaypoint begin
+         Mobile=Player
+         BumpRadius=1000
+         Position=23220.70,-9489.76,-2187.02
+      end
+   end
+   Actions= begin
+      Camera 0 begin
+         ChaseOffset=15,15,-70
+         VanityOffset=-35,0,0
+      end
+   end
+end
+
+; Mesa loop entry, look from above
+event: begin
+   Conditions= begin
+      MobileAtWaypoint begin
+         Mobile=Player
+         BumpRadius=1000
+         Position=21932.98,15794.41,-1412.77
+      end
+   end
+   Actions= begin
+      Camera 0 begin
+         ChaseOffset=15,15,150
+         VanityOffset=70,0,0
+      end
+   end
+end
+
+; Mesa loop top, look from behind
+event: begin
+   Conditions= begin
+      MobileAtWaypoint begin
+         Mobile=Player
+         BumpRadius=1000
+         Position=26233.91,18033.28,2480.11
+      end
+   end
+   Actions= begin
+      Camera 0 begin
+         ChaseOffset=0,15,-70
+         VanityOffset=-32,0,0
+      end
+   end
+end
+
+event: begin
+   Conditions= begin
+      MobileAtWaypoint begin
+         Mobile=Player
+         BumpRadius=1000
+         Position=9797.59,3500.30,-2095.07
+      end
+   end
+   Actions= begin
+      Camera 0 begin
+         ChaseOffset=0,10,50
+         VanityOffset=25,0,0
+      end
+   end
+end

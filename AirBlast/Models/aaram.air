@@ -1,0 +1,30 @@
+;
+; Generic AA missile
+;
+Model=Models\aaram.3ds
+Collision= begin
+        Type=Mobile
+        Size=1, 1, 3
+end
+Engine0= begin
+        MaxOutput=9000
+        OutputInertia=9000
+        Position=0,0,-3
+        Fuel=20
+end
+DenseSmoke=Y
+DecoyResistance=1.0
+DamageRadius=150
+DamageMin=1
+DamageMax=80
+Mass=500
+HullResistance=50
+LiftPerMSec=0.0
+StallVelocity=5
+StallAngle=0.5
+StallManeuverabilityRatio=1
+MaxRoll=0.02
+MaxPitch=0.02
+MaxYaw=0.02
+AirFrictionMin=-7
+AirFrictionMax=-3

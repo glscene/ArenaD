@@ -1,0 +1,102 @@
+;
+; Hoops supplement for the tutorial mission
+;
+
+hoop: begin
+   Name=Hoop00
+   Position=-11448.56,5401.71,-48.57
+   Direction=0,0,0
+   HoopSize=200
+   NextHoop=Hoop01
+   Active=Y
+end
+hoop: begin
+   Name=Hoop01
+   Position=-8708.63,5645.19,-519.41
+   Direction=0,0,0
+   HoopSize=200
+   NextHoop=Hoop02
+end
+hoop: begin
+   Name=Hoop02
+   Position=-6186.23,3478.20,-284.02
+   Direction=0,0,0
+   HoopSize=200
+   NextHoop=Hoop03
+end
+hoop: begin
+   Name=Hoop03
+   Position=-5055.89,2175.77,357.39
+   Direction=0,0,0
+   HoopSize=200
+   NextHoop=Hoop04
+end
+hoop: begin
+   Name=Hoop04
+   Position=-3763.15,817.84,755.60
+   Direction=0,0,0
+   HoopSize=200
+   NextHoop=Hoop05
+end
+hoop: begin
+   Name=Hoop05
+   Position=-2421.46,864.06,509.04
+   Direction=0,0,0
+   HoopSize=200
+   NextHoop=Hoop06
+end
+hoop: begin
+   Name=Hoop06
+   Position=-522.35,2810.13,355.04
+   Direction=0,0,0
+   HoopSize=200
+   NextHoop=Hoop07
+end
+hoop: begin
+   Name=Hoop07
+   Position=-1024.90,4203.14,-51.36
+   Direction=0,0,0
+   HoopSize=200
+   NextHoop=Hoop08
+end
+hoop: begin
+   Name=Hoop08
+   Position=-2307.15,5579.62,-891.91
+   Direction=0,0,0
+   HoopSize=200
+   NextHoop=Hoop09
+end
+hoop: begin
+   Name=Hoop09
+   Position=-3489.86,7058.70,-1780.72
+   Direction=0,0,0
+   HoopSize=200
+   NextHoop=Hoop10
+end
+hoop: begin
+   Name=Hoop10
+   Position=-3591.48,9099.44,-1693.04
+   Direction=0,0,0
+   HoopSize=200
+   NextHoop=Hoop11
+end
+hoop: begin
+   Name=Hoop11
+   Position=-5500,11779.73,-744.99
+   Direction=0,0,0
+   HoopSize=200
+   NextHoop=Hoop12
+end
+hoop: begin
+   Name=Hoop12
+   Position=-5500,15136.43,-420.65
+   Direction=0,0,0
+   HoopSize=200
+   NextHoop=Hoop13
+end
+hoop: begin
+   Name=Hoop13
+   Position=1370.32,17036.45,-222.04
+   Direction=0,0,0
+   HoopSize=200
+end
